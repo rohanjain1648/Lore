@@ -1,0 +1,349 @@
+{
+  "company": "FalkorDB (public GitHub)",
+  "now": "2026-10-11T07:15:27",
+  "teams": [
+    {
+      "id": "team-contributors",
+      "name": "Contributors team"
+    }
+  ],
+  "people": [
+    {
+      "id": "galshubeli",
+      "name": "galshubeli",
+      "handle": "galshubeli",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "naseem77",
+      "name": "Naseem77",
+      "handle": "Naseem77",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "gkorland",
+      "name": "gkorland",
+      "handle": "gkorland",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "castlenthesky",
+      "name": "castlenthesky",
+      "handle": "castlenthesky",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "copilot",
+      "name": "Copilot",
+      "handle": "Copilot",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "santoshdhaladhuli",
+      "name": "SantoshDhaladhuli",
+      "handle": "SantoshDhaladhuli",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "mikemikimike",
+      "name": "mikemikimike",
+      "handle": "mikemikimike",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "barakb",
+      "name": "barakb",
+      "handle": "barakb",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "drr00t",
+      "name": "drr00t",
+      "handle": "drr00t",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "maxdswain",
+      "name": "maxdswain",
+      "handle": "maxdswain",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "binggao1230",
+      "name": "binggao1230",
+      "handle": "binggao1230",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "kramerica-inc-dev",
+      "name": "kramerica-inc-dev",
+      "handle": "kramerica-inc-dev",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "dudizimber",
+      "name": "dudizimber",
+      "handle": "dudizimber",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "handle": "Claude",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "vivalahelvig",
+      "name": "vivalahelvig",
+      "handle": "vivalahelvig",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "muhammadqadora",
+      "name": "MuhammadQadora",
+      "handle": "MuhammadQadora",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "david-morales",
+      "name": "david-morales",
+      "handle": "david-morales",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "shahar-biron",
+      "name": "shahar-biron",
+      "handle": "shahar-biron",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "homerokzam",
+      "name": "homerokzam",
+      "handle": "homerokzam",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "lingmao233",
+      "name": "lingmao233",
+      "handle": "lingmao233",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "anchel123",
+      "name": "Anchel123",
+      "handle": "Anchel123",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "sirajhoshan",
+      "name": "sirajhoshan",
+      "handle": "sirajhoshan",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "c-bjorn",
+      "name": "C-Bjorn",
+      "handle": "C-Bjorn",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "dvirdukhan",
+      "name": "DvirDukhan",
+      "handle": "DvirDukhan",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "febus982",
+      "name": "febus982",
+      "handle": "febus982",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "cyberwanderess",
+      "name": "CyberWanderess",
+      "handle": "CyberWanderess",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "dragnot",
+      "name": "dragnot",
+      "handle": "dragnot",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "ghost",
+      "name": "ghost",
+      "handle": "ghost",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "chrisai-code",
+      "name": "ChrisAi-code",
+      "handle": "ChrisAi-code",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "sachinjogi",
+      "name": "sachinjogi",
+      "handle": "sachinjogi",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "sen-to",
+      "name": "sen-to",
+      "handle": "sen-to",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "razdgann",
+      "name": "razdgann",
+      "handle": "razdgann",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "hd-o",
+      "name": "hd-o",
+      "handle": "hd-o",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "ogsiji",
+      "name": "OGsiji",
+      "handle": "OGsiji",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "sjpritchard",
+      "name": "sjpritchard",
+      "handle": "sjpritchard",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    },
+    {
+      "id": "austin-engle",
+      "name": "austin-engle",
+      "handle": "austin-engle",
+      "team": "team-contributors",
+      "role": "contributor",
+      "left_at": null
+    }
+  ],
+  "systems": [
+    {
+      "id": "falkordb-py",
+      "name": "falkordb-py",
+      "kind": "repository",
+      "aliases": [
+        "falkordb-py",
+        "FalkorDB/falkordb-py",
+        "falkordb py"
+      ]
+    },
+    {
+      "id": "graphrag-sdk",
+      "name": "graphrag-sdk",
+      "kind": "repository",
+      "aliases": [
+        "GraphRAG-SDK",
+        "FalkorDB/GraphRAG-SDK",
+        "GraphRAG SDK"
+      ]
+    },
+    {
+      "id": "falkordb-mcpserver",
+      "name": "falkordb-mcpserver",
+      "kind": "repository",
+      "aliases": [
+        "FalkorDB-MCPServer",
+        "FalkorDB/FalkorDB-MCPServer",
+        "FalkorDB MCPServer"
+      ]
+    }
+  ],
+  "projects": [],
+  "topics": [
+    {
+      "id": "bug",
+      "name": "bug",
+      "keywords": [
+        "bug"
+      ]
+    },
+    {
+      "id": "enhancement",
+      "name": "enhancement",
+      "keywords": [
+        "enhancement"
+      ]
+    }
+  ]
+}
