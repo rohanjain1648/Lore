@@ -1,0 +1,539 @@
+{
+  "rows": [
+    {
+      "id": "own-1",
+      "bucket": "ownership",
+      "q": "Who owns payments-service?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": false
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "own-2",
+      "bucket": "ownership",
+      "q": "Who owns search-api?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "own-3",
+      "bucket": "ownership",
+      "q": "Who owns data-pipeline?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": false,
+        "current": null
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "own-4",
+      "bucket": "ownership",
+      "q": "Who owns auth-gateway?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": false,
+        "current": null
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-1",
+      "bucket": "decisions",
+      "q": "Why did we choose FalkorDB for the recommendations engine?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-2",
+      "bucket": "decisions",
+      "q": "Who approved using FalkorDB as the graph store for recs-engine?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-3",
+      "bucket": "decisions",
+      "q": "Can we deploy on Fridays?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-4",
+      "bucket": "decisions",
+      "q": "Why was the Friday deploy freeze brought back?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-5",
+      "bucket": "decisions",
+      "q": "What is our policy on gRPC for mobile-facing APIs?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": false
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-6",
+      "bucket": "decisions",
+      "q": "Which ticket implemented the decision to revert mobile APIs to REST?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "dec-7",
+      "bucket": "decisions",
+      "q": "Who proposed lifting the Friday deploy freeze?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "exp-1",
+      "bucket": "expertise",
+      "q": "Who knows about Kafka?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "find_experts"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "exp-2",
+      "bucket": "expertise",
+      "q": "Who should I ask about auth-gateway?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "find_experts"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "exp-3",
+      "bucket": "expertise",
+      "q": "What is the bus factor risk for auth-gateway?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "bus_factor"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "exp-4",
+      "bucket": "expertise",
+      "q": "Tell me about Project Shield",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "profile"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "fresh-1",
+      "bucket": "freshness",
+      "q": "Which docs are out of date?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "freshness"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "fresh-2",
+      "bucket": "freshness",
+      "q": "What changed since June?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": null,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": null,
+        "current": null
+      },
+      "tools": [
+        "whats_changed"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "time-1",
+      "bucket": "time-travel",
+      "q": "Who owns payments-service?",
+      "as_of": "2026-05-01T23:59:59",
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "time-2",
+      "bucket": "time-travel",
+      "q": "Can we deploy on Fridays?",
+      "as_of": "2026-06-01T23:59:59",
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": false
+      },
+      "tools": [
+        "trace_decision"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "time-3",
+      "bucket": "time-travel",
+      "q": "Who owns search-api?",
+      "as_of": "2026-03-01T23:59:59",
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": true
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": false,
+        "current": false
+      },
+      "tools": [
+        "who_owns"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "srch-1",
+      "bucket": "lookup",
+      "q": "How do retries avoid duplicate charges?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": false,
+        "evidence": false,
+        "current": null
+      },
+      "tools": [
+        "search"
+      ],
+      "mode": "offline"
+    },
+    {
+      "id": "srch-2",
+      "bucket": "lookup",
+      "q": "How many Kafka brokers does the data pipeline have?",
+      "as_of": null,
+      "lore": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "baseline": {
+        "fact": true,
+        "evidence": true,
+        "current": null
+      },
+      "tools": [
+        "search"
+      ],
+      "mode": "offline"
+    }
+  ],
+  "summary": {
+    "fact": {
+      "lore": [
+        22,
+        22
+      ],
+      "baseline": [
+        14,
+        22
+      ]
+    },
+    "evidence": {
+      "lore": [
+        16,
+        16
+      ],
+      "baseline": [
+        12,
+        16
+      ]
+    },
+    "current": {
+      "lore": [
+        7,
+        7
+      ],
+      "baseline": [
+        3,
+        7
+      ]
+    }
+  },
+  "by_bucket": {
+    "decisions": {
+      "lore": [
+        7,
+        7
+      ],
+      "baseline": [
+        7,
+        7
+      ]
+    },
+    "expertise": {
+      "lore": [
+        4,
+        4
+      ],
+      "baseline": [
+        2,
+        4
+      ]
+    },
+    "freshness": {
+      "lore": [
+        2,
+        2
+      ],
+      "baseline": [
+        0,
+        2
+      ]
+    },
+    "lookup": {
+      "lore": [
+        2,
+        2
+      ],
+      "baseline": [
+        1,
+        2
+      ]
+    },
+    "ownership": {
+      "lore": [
+        4,
+        4
+      ],
+      "baseline": [
+        2,
+        4
+      ]
+    },
+    "time-travel": {
+      "lore": [
+        3,
+        3
+      ],
+      "baseline": [
+        2,
+        3
+      ]
+    }
+  },
+  "mode": "offline"
+}
