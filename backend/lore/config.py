@@ -11,6 +11,7 @@ FALKORDB_HOST = os.getenv("FALKORDB_HOST", "localhost")
 FALKORDB_PORT = int(os.getenv("FALKORDB_PORT", "6391"))
 FALKORDB_USERNAME = os.getenv("FALKORDB_USERNAME") or None
 FALKORDB_PASSWORD = os.getenv("FALKORDB_PASSWORD") or None
+FALKORDB_SSL = os.getenv("FALKORDB_SSL", "").lower() in ("1", "true", "yes")
 
 DATA_DIR = Path(os.getenv("LORE_DATA_DIR", ROOT / "data"))
 DEFAULT_TENANT = os.getenv("LORE_DEFAULT_TENANT", "northwind")

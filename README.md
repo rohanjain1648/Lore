@@ -191,20 +191,6 @@ host (Railway, Render, Fly.io) with `FALKORDB_HOST / FALKORDB_PORT / FALKORDB_US
 
 ---
 
-## Demo script (what to try)
-
-1. **Ask:** "Who owns payments-service?" → Platform team since 2026-06-15, with the earlier owner and **two stale docs** flagged.
-2. Drag the **time slider** to April and ask again → the Payments team, citing January's team directory.
-3. **"Can we deploy on Fridays?"** → no. The freeze was reinstated after INC-7. Lore shows the full chain
-   Jan policy → May "lift" → Aug "reinstate", plus the incident messages it was based on.
-4. **Who knows → auth-gateway** → Sam Okafor is the top expert, **left on 2026-07-31**, so bus-factor risk is high.
-5. **Live ingest:** post "search-api is now owned by the Data team" → the old claim is replaced live, contacts are re-ranked,
-   and the team directory stays flagged.
-6. **Freshness:** stale docs with reasons → "Flag for update" → shows up under **Actions**.
-7. Switch the graph to **lore_falkordb** → the same questions, answered over real FalkorDB GitHub repos.
-
----
-
 ## Data
 
 - **Northwind Labs** is entirely synthetic (`data/northwind/generate.py`, fixed seed). Its story facts are hand-written so the eval has ground truth.
