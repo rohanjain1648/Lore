@@ -1,0 +1,34 @@
+# Full stack:      docker compose up --build        -> http://localhost:8000
+# Only FalkorDB:   docker compose up -d falkordb     (for local development)
+services:
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: lore-falkordb
+    ports:
+      - "6391:6379"   # Redis protocol (host 6391 so it doesn't clash with another local FalkorDB)
+      - "3011:3000"   # FalkorDB Browser -> http://localhost:3011
+    volumes:
+      - falkordb_data:/var/lib/falkordb/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  lore:
+    build: .
+    container_name: lore-app
+    depends_on:
+      falkordb:
+        condition: service_healthy
+    environment:
+      FALKORDB_HOST: falkordb
+      FALKORDB_PORT: "6379"
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    ports:
+      - "8000:8000"
+    profiles: ["app"]
+
+volumes:
+  falkordb_data:

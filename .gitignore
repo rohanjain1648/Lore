@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+frontend/dist/
+.env
+.playwright-mcp/
+.remember/
+*.log
+AI_DISCLOSURE.md
+BLOG.md
+
+PLAN.md
