@@ -1,0 +1,114 @@
+[
+  {
+    "id": "mtg-2026-02-10-arch",
+    "title": "Architecture sync: service protocols",
+    "date": "2026-02-10T15:00:00",
+    "organizer": "marco.rossi",
+    "attendees": [
+      "marco.rossi",
+      "sam.okafor",
+      "jonas.weber",
+      "dev.patel",
+      "diego.alvarez",
+      "lena.novak"
+    ],
+    "notes": "Marco presented the latency numbers for REST between payments-service and search-api.\nDecision: migrate internal service-to-service calls from REST to gRPC. Proposed by Marco Rossi, approved by Dev Patel.\nDiego raised concerns about gRPC-web on the mobile-app; to be revisited.\nAction: Jonas to draft the protobuf contracts.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-02-10-arch",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-03-12-atlas",
+    "title": "Atlas architecture review",
+    "date": "2026-03-12T14:00:00",
+    "organizer": "lena.novak",
+    "attendees": [
+      "lena.novak",
+      "arjun.mehta",
+      "chloe.dubois",
+      "aiko.tanaka",
+      "dev.patel"
+    ],
+    "notes": "Arjun walked through the benchmark in ATL-14: FalkorDB answered 3-hop recommendation queries about 4x faster than Neo4j on our sample.\nDecision: use FalkorDB as the graph store for recs-engine instead of Neo4j. Proposed by Lena Novak, approved by Dev Patel.\nAiko confirmed the data-pipeline can stream events into the graph through Kafka.\nAction: Chloe to set up the FalkorDB cluster.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-03-12-atlas",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-05-08-release",
+    "title": "Release process review",
+    "date": "2026-05-08T11:00:00",
+    "organizer": "olu.adeyemi",
+    "attendees": [
+      "olu.adeyemi",
+      "hannah.kim",
+      "nora.fischer",
+      "marco.rossi",
+      "priya.sharma"
+    ],
+    "notes": "Canary releases have been stable for two months with automated rollback.\nDecision: lift the Friday deploy freeze; deploys are allowed on Fridays before 2pm with a canary. Proposed by Olu Adeyemi, approved by Nora Fischer.\nHannah will update the deploy-pipeline guardrails.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-05-08-release",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-06-15-reorg",
+    "title": "Engineering reorg briefing",
+    "date": "2026-06-15T10:00:00",
+    "organizer": "nora.fischer",
+    "attendees": [
+      "nora.fischer",
+      "dev.patel",
+      "marco.rossi",
+      "priya.sharma",
+      "carlos.mendes"
+    ],
+    "notes": "Payments team will focus on Project Ledger compliance work.\nDecision: move ownership of payments-service from the Payments team to the Platform team. Proposed by Nora Fischer, approved by Dev Patel.\nMarco Rossi becomes the escalation contact for payments-service.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-06-15-reorg",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-07-22-mobile",
+    "title": "Mobile API retro",
+    "date": "2026-07-22T16:00:00",
+    "organizer": "diego.alvarez",
+    "attendees": [
+      "diego.alvarez",
+      "sara.lindqvist",
+      "marco.rossi",
+      "jonas.weber"
+    ],
+    "notes": "gRPC-web added 40% to mobile-app bundle size and broke two older Android versions.\nDecision: revert mobile-facing APIs back to REST; keep gRPC for internal service-to-service calls. Proposed by Diego Alvarez, approved by Marco Rossi.\nJonas to restore the REST endpoints on the edge proxy.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-07-22-mobile",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-08-31-inc7",
+    "title": "INC-7 postmortem: Friday checkout outage",
+    "date": "2026-08-31T13:00:00",
+    "organizer": "olu.adeyemi",
+    "attendees": [
+      "olu.adeyemi",
+      "hannah.kim",
+      "nora.fischer",
+      "carlos.mendes",
+      "fatima.zahra",
+      "marco.rossi"
+    ],
+    "notes": "On Friday 2026-08-28 a checkout-web deploy at 1:40pm passed canary but broke card payments for 3 hours (INC-7).\nDecision: reinstate the Friday deploy freeze after the INC-7 checkout outage. Proposed by Olu Adeyemi, approved by Nora Fischer.\nFatima to add an idempotency check to the canary analysis.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-08-31-inc7",
+    "source": "meetings"
+  },
+  {
+    "id": "mtg-2026-08-05-shield",
+    "title": "Project Shield status",
+    "date": "2026-08-05T10:00:00",
+    "organizer": "marco.rossi",
+    "attendees": [
+      "marco.rossi",
+      "mei.lin",
+      "jonas.weber",
+      "nora.fischer"
+    ],
+    "notes": "Sam Okafor left on 2026-07-31. Mei Lin is picking up auth-gateway but has not run token rotation yet.\nShield is at risk: the SAML metadata refresh and key rotation were only ever done by Sam.\nAction: Marco to find a second engineer for auth-gateway.",
+    "url": "https://wiki.northwind.example/meetings/mtg-2026-08-05-shield",
+    "source": "meetings"
+  }
+]

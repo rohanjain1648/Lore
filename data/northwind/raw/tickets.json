@@ -1,0 +1,1209 @@
+[
+  {
+    "key": "ATL-14",
+    "project": "atlas",
+    "title": "Benchmark FalkorDB vs Neo4j for recs-engine",
+    "assignee": "arjun.mehta",
+    "reporter": "lena.novak",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-02-25T10:00:00",
+    "closed": "2026-03-05T10:00:00",
+    "description": "Compare graph stores for recs-engine 3-hop queries. Result: FalkorDB p95 4x lower than Neo4j, lower memory.",
+    "comments": [
+      {
+        "id": "ATL-14-c1",
+        "author": "chloe.dubois",
+        "ts": "2026-03-04T12:00:00",
+        "text": "Added the memory numbers, FalkorDB uses less RAM on the same graph.",
+        "url": "https://tracker.northwind.example/ATL-14#c1"
+      }
+    ],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/ATL-14"
+  },
+  {
+    "key": "ATL-21",
+    "project": "atlas",
+    "title": "Set up FalkorDB cluster for recs-engine",
+    "assignee": "chloe.dubois",
+    "reporter": "lena.novak",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-03-13T09:00:00",
+    "closed": "2026-03-27T17:00:00",
+    "description": "Implements the Atlas architecture review decision to use FalkorDB as the graph store.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/ATL-21"
+  },
+  {
+    "key": "PLAT-88",
+    "project": "ledger",
+    "title": "Handover payments-service to Platform",
+    "assignee": "marco.rossi",
+    "reporter": "nora.fischer",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-06-15T13:00:00",
+    "closed": "2026-06-30T17:00:00",
+    "description": "payments-service is now owned by the Platform team. Transfer on-call, dashboards and runbooks.",
+    "comments": [
+      {
+        "id": "PLAT-88-c1",
+        "author": "priya.sharma",
+        "ts": "2026-06-20T10:00:00",
+        "text": "Walked Jonas and Marco through idempotency keys and the PCI boundary.",
+        "url": "https://tracker.northwind.example/PLAT-88#c1"
+      }
+    ],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/PLAT-88"
+  },
+  {
+    "key": "SHD-31",
+    "project": "shield",
+    "title": "Automate auth-gateway signing key rotation",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "open",
+    "created": "2026-05-12T10:00:00",
+    "closed": null,
+    "description": "Token rotation is a manual script only Sam has run. Automate it before the next rotation.",
+    "comments": [
+      {
+        "id": "SHD-31-c1",
+        "author": "mei.lin",
+        "ts": "2026-08-06T11:00:00",
+        "text": "Picking this up after Sam's departure. Need someone who has done a rotation to review.",
+        "url": "https://tracker.northwind.example/SHD-31#c1"
+      }
+    ],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/SHD-31"
+  },
+  {
+    "key": "SHD-35",
+    "project": "shield",
+    "title": "Automate SAML metadata refresh",
+    "assignee": "mei.lin",
+    "reporter": "marco.rossi",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "open",
+    "created": "2026-08-05T12:00:00",
+    "closed": null,
+    "description": "SAML metadata refresh is manual; if it lapses enterprise SSO fails.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/SHD-35"
+  },
+  {
+    "key": "PLAT-61",
+    "project": "ledger",
+    "title": "Draft protobuf contracts for internal gRPC",
+    "assignee": "jonas.weber",
+    "reporter": "marco.rossi",
+    "components": [
+      "payments-service",
+      "search-api"
+    ],
+    "status": "done",
+    "created": "2026-02-11T09:00:00",
+    "closed": "2026-03-10T17:00:00",
+    "description": "Implements the decision to migrate internal service-to-service calls from REST to gRPC.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/PLAT-61"
+  },
+  {
+    "key": "MOB-140",
+    "project": "swift",
+    "title": "Restore REST endpoints for mobile-app",
+    "assignee": "jonas.weber",
+    "reporter": "diego.alvarez",
+    "components": [
+      "mobile-app"
+    ],
+    "status": "done",
+    "created": "2026-07-23T09:00:00",
+    "closed": "2026-08-07T17:00:00",
+    "description": "Implements the decision to revert mobile-facing APIs back to REST.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/MOB-140"
+  },
+  {
+    "key": "INC-7",
+    "project": "swift",
+    "title": "Checkout outage: card payments failing",
+    "assignee": "hannah.kim",
+    "reporter": "hannah.kim",
+    "components": [
+      "checkout-web",
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-08-28T13:50:00",
+    "closed": "2026-08-28T17:10:00",
+    "description": "Friday 1:40pm checkout-web deploy broke card payments for 3 hours. Canary missed the payment flow.",
+    "comments": [
+      {
+        "id": "INC-7-c1",
+        "author": "fatima.zahra",
+        "ts": "2026-08-28T14:30:00",
+        "text": "Payload shape mismatch between checkout-web and payments-service.",
+        "url": "https://tracker.northwind.example/INC-7#c1"
+      }
+    ],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/INC-7"
+  },
+  {
+    "key": "SRE-52",
+    "project": "beacon",
+    "title": "Friday deploy guardrails in deploy-pipeline",
+    "assignee": "hannah.kim",
+    "reporter": "olu.adeyemi",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-05-08T12:00:00",
+    "closed": "2026-05-15T17:00:00",
+    "description": "Allow Friday deploys before 2pm with canary, per the release process review.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/SRE-52"
+  },
+  {
+    "key": "SRE-71",
+    "project": "beacon",
+    "title": "Re-enable Friday deploy freeze",
+    "assignee": "olu.adeyemi",
+    "reporter": "olu.adeyemi",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-08-31T15:00:00",
+    "closed": "2026-09-02T17:00:00",
+    "description": "Reinstate the Friday deploy freeze after INC-7.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/SRE-71"
+  },
+  {
+    "key": "DATA-19",
+    "project": "atlas",
+    "title": "Rebalance recs Kafka topic partitions",
+    "assignee": "aiko.tanaka",
+    "reporter": "ben.carter",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-06-03T09:15:00",
+    "closed": "2026-06-03T11:45:00",
+    "description": "Consumer lag from partition skew; move from 6 to 12 partitions.",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/DATA-19"
+  },
+  {
+    "key": "BG-100",
+    "project": "ledger",
+    "title": "Add alerting for payments-service",
+    "assignee": "marco.rossi",
+    "reporter": "marco.rossi",
+    "components": [
+      "payments-service"
+    ],
+    "status": "open",
+    "created": "2026-09-24T17:14:00",
+    "closed": null,
+    "description": "Work item on payments-service (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-100"
+  },
+  {
+    "key": "BG-101",
+    "project": "shield",
+    "title": "Investigate p99 latency regression in auth-gateway",
+    "assignee": "marco.rossi",
+    "reporter": "marco.rossi",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-08-11T14:25:00",
+    "closed": "2026-08-16T14:25:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-101"
+  },
+  {
+    "key": "BG-102",
+    "project": "ledger",
+    "title": "Document PCI tokenization behaviour of payments-service",
+    "assignee": "marco.rossi",
+    "reporter": "marco.rossi",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-09-14T16:09:00",
+    "closed": "2026-09-19T16:09:00",
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-102"
+  },
+  {
+    "key": "BG-103",
+    "project": "shield",
+    "title": "Add alerting for auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-05-11T15:42:00",
+    "closed": "2026-05-21T15:42:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-103"
+  },
+  {
+    "key": "BG-104",
+    "project": "shield",
+    "title": "Document token rotation behaviour of auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-05-21T14:15:00",
+    "closed": "2026-05-26T14:15:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-104"
+  },
+  {
+    "key": "BG-105",
+    "project": "shield",
+    "title": "Investigate p99 latency regression in auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-03-10T10:00:00",
+    "closed": "2026-03-18T10:00:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-105"
+  },
+  {
+    "key": "BG-106",
+    "project": "shield",
+    "title": "Improve token rotation handling in auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "open",
+    "created": "2026-04-24T17:16:00",
+    "closed": null,
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-106"
+  },
+  {
+    "key": "BG-107",
+    "project": "shield",
+    "title": "Investigate p99 latency regression in auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-03-04T16:53:00",
+    "closed": "2026-03-13T16:53:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-107"
+  },
+  {
+    "key": "BG-108",
+    "project": "shield",
+    "title": "Improve token rotation handling in auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-07-14T10:56:00",
+    "closed": "2026-07-17T10:56:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-108"
+  },
+  {
+    "key": "BG-109",
+    "project": "shield",
+    "title": "Document token rotation behaviour of auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-03-03T12:45:00",
+    "closed": "2026-03-09T12:45:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-109"
+  },
+  {
+    "key": "BG-110",
+    "project": "shield",
+    "title": "Add alerting for auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-02-25T09:05:00",
+    "closed": "2026-03-08T09:05:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-110"
+  },
+  {
+    "key": "BG-111",
+    "project": "shield",
+    "title": "Upgrade runtime for auth-gateway",
+    "assignee": "sam.okafor",
+    "reporter": "sam.okafor",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-03-14T11:40:00",
+    "closed": "2026-03-19T11:40:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-111"
+  },
+  {
+    "key": "BG-112",
+    "project": "ledger",
+    "title": "Improve PCI tokenization handling in payments-service",
+    "assignee": "jonas.weber",
+    "reporter": "jonas.weber",
+    "components": [
+      "payments-service"
+    ],
+    "status": "open",
+    "created": "2026-07-17T14:27:00",
+    "closed": null,
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-112"
+  },
+  {
+    "key": "BG-113",
+    "project": "ledger",
+    "title": "Document idempotency behaviour of payments-service",
+    "assignee": "jonas.weber",
+    "reporter": "jonas.weber",
+    "components": [
+      "payments-service"
+    ],
+    "status": "open",
+    "created": "2026-08-07T17:43:00",
+    "closed": null,
+    "description": "Work item on payments-service (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-113"
+  },
+  {
+    "key": "BG-114",
+    "project": "beacon",
+    "title": "Improve tracing handling in search-api",
+    "assignee": "jonas.weber",
+    "reporter": "jonas.weber",
+    "components": [
+      "search-api"
+    ],
+    "status": "done",
+    "created": "2026-04-29T14:39:00",
+    "closed": "2026-05-05T14:39:00",
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-114"
+  },
+  {
+    "key": "BG-115",
+    "project": "shield",
+    "title": "Investigate p99 latency regression in auth-gateway",
+    "assignee": "mei.lin",
+    "reporter": "mei.lin",
+    "components": [
+      "auth-gateway"
+    ],
+    "status": "done",
+    "created": "2026-05-30T09:19:00",
+    "closed": "2026-06-04T09:19:00",
+    "description": "Work item on auth-gateway (token rotation).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-115"
+  },
+  {
+    "key": "BG-116",
+    "project": "ledger",
+    "title": "Investigate p99 latency regression in payments-service",
+    "assignee": "priya.sharma",
+    "reporter": "priya.sharma",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-01-25T13:15:00",
+    "closed": "2026-01-30T13:15:00",
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-116"
+  },
+  {
+    "key": "BG-117",
+    "project": "ledger",
+    "title": "Improve idempotency handling in payments-service",
+    "assignee": "priya.sharma",
+    "reporter": "priya.sharma",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-02-14T15:44:00",
+    "closed": "2026-02-17T15:44:00",
+    "description": "Work item on payments-service (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-117"
+  },
+  {
+    "key": "BG-118",
+    "project": "ledger",
+    "title": "Upgrade runtime for payments-service",
+    "assignee": "priya.sharma",
+    "reporter": "priya.sharma",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-04-03T16:26:00",
+    "closed": "2026-04-04T16:26:00",
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-118"
+  },
+  {
+    "key": "BG-119",
+    "project": "ledger",
+    "title": "Add alerting for payments-service",
+    "assignee": "carlos.mendes",
+    "reporter": "carlos.mendes",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-01-08T15:52:00",
+    "closed": "2026-01-16T15:52:00",
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-119"
+  },
+  {
+    "key": "BG-120",
+    "project": "swift",
+    "title": "Investigate p99 latency regression in checkout-web",
+    "assignee": "carlos.mendes",
+    "reporter": "carlos.mendes",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "done",
+    "created": "2026-04-30T17:41:00",
+    "closed": "2026-05-05T17:41:00",
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-120"
+  },
+  {
+    "key": "BG-121",
+    "project": "swift",
+    "title": "Improve idempotency handling in checkout-web",
+    "assignee": "carlos.mendes",
+    "reporter": "carlos.mendes",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "open",
+    "created": "2026-04-30T13:20:00",
+    "closed": null,
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-121"
+  },
+  {
+    "key": "BG-122",
+    "project": "swift",
+    "title": "Add alerting for checkout-web",
+    "assignee": "carlos.mendes",
+    "reporter": "carlos.mendes",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "done",
+    "created": "2026-03-11T16:36:00",
+    "closed": "2026-03-21T16:36:00",
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-122"
+  },
+  {
+    "key": "BG-123",
+    "project": "swift",
+    "title": "Improve idempotency handling in checkout-web",
+    "assignee": "fatima.zahra",
+    "reporter": "fatima.zahra",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "done",
+    "created": "2026-01-09T17:08:00",
+    "closed": "2026-01-14T17:08:00",
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-123"
+  },
+  {
+    "key": "BG-124",
+    "project": "ledger",
+    "title": "Upgrade runtime for payments-service",
+    "assignee": "fatima.zahra",
+    "reporter": "fatima.zahra",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-06-23T16:06:00",
+    "closed": "2026-06-24T16:06:00",
+    "description": "Work item on payments-service (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-124"
+  },
+  {
+    "key": "BG-125",
+    "project": "ledger",
+    "title": "Improve PCI tokenization handling in payments-service",
+    "assignee": "fatima.zahra",
+    "reporter": "fatima.zahra",
+    "components": [
+      "payments-service"
+    ],
+    "status": "done",
+    "created": "2026-04-05T09:16:00",
+    "closed": "2026-04-13T09:16:00",
+    "description": "Work item on payments-service (PCI tokenization).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-125"
+  },
+  {
+    "key": "BG-126",
+    "project": "beacon",
+    "title": "Investigate p99 latency regression in search-api",
+    "assignee": "lena.novak",
+    "reporter": "lena.novak",
+    "components": [
+      "search-api"
+    ],
+    "status": "open",
+    "created": "2026-02-07T13:44:00",
+    "closed": null,
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-126"
+  },
+  {
+    "key": "BG-127",
+    "project": "beacon",
+    "title": "Investigate p99 latency regression in search-api",
+    "assignee": "lena.novak",
+    "reporter": "lena.novak",
+    "components": [
+      "search-api"
+    ],
+    "status": "done",
+    "created": "2026-01-26T09:56:00",
+    "closed": "2026-02-02T09:56:00",
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-127"
+  },
+  {
+    "key": "BG-128",
+    "project": "beacon",
+    "title": "Investigate p99 latency regression in search-api",
+    "assignee": "lena.novak",
+    "reporter": "lena.novak",
+    "components": [
+      "search-api"
+    ],
+    "status": "open",
+    "created": "2026-01-29T09:48:00",
+    "closed": null,
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-128"
+  },
+  {
+    "key": "BG-129",
+    "project": "atlas",
+    "title": "Document Cypher query behaviour of recs-engine",
+    "assignee": "arjun.mehta",
+    "reporter": "arjun.mehta",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-06-26T11:31:00",
+    "closed": "2026-07-08T11:31:00",
+    "description": "Work item on recs-engine (Cypher query).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-129"
+  },
+  {
+    "key": "BG-130",
+    "project": "atlas",
+    "title": "Upgrade runtime for recs-engine",
+    "assignee": "arjun.mehta",
+    "reporter": "arjun.mehta",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-08-14T16:15:00",
+    "closed": "2026-08-22T16:15:00",
+    "description": "Work item on recs-engine (Cypher query).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-130"
+  },
+  {
+    "key": "BG-131",
+    "project": "atlas",
+    "title": "Investigate p99 latency regression in recs-engine",
+    "assignee": "arjun.mehta",
+    "reporter": "arjun.mehta",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-08-22T13:49:00",
+    "closed": "2026-08-29T13:49:00",
+    "description": "Work item on recs-engine (Cypher query).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-131"
+  },
+  {
+    "key": "BG-132",
+    "project": "atlas",
+    "title": "Upgrade runtime for recs-engine",
+    "assignee": "chloe.dubois",
+    "reporter": "chloe.dubois",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-09-04T11:14:00",
+    "closed": "2026-09-12T11:14:00",
+    "description": "Work item on recs-engine (Cypher query).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-132"
+  },
+  {
+    "key": "BG-133",
+    "project": "beacon",
+    "title": "Fix flaky integration test in search-api",
+    "assignee": "chloe.dubois",
+    "reporter": "chloe.dubois",
+    "components": [
+      "search-api"
+    ],
+    "status": "done",
+    "created": "2026-08-31T16:57:00",
+    "closed": "2026-09-05T16:57:00",
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-133"
+  },
+  {
+    "key": "BG-134",
+    "project": "atlas",
+    "title": "Upgrade runtime for recs-engine",
+    "assignee": "chloe.dubois",
+    "reporter": "chloe.dubois",
+    "components": [
+      "recs-engine"
+    ],
+    "status": "done",
+    "created": "2026-09-13T13:40:00",
+    "closed": "2026-09-20T13:40:00",
+    "description": "Work item on recs-engine (Cypher query).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-134"
+  },
+  {
+    "key": "BG-135",
+    "project": "beacon",
+    "title": "Upgrade runtime for search-api",
+    "assignee": "chloe.dubois",
+    "reporter": "chloe.dubois",
+    "components": [
+      "search-api"
+    ],
+    "status": "open",
+    "created": "2026-09-27T16:06:00",
+    "closed": null,
+    "description": "Work item on search-api (tracing).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-135"
+  },
+  {
+    "key": "BG-136",
+    "project": "atlas",
+    "title": "Document Kafka consumer lag behaviour of data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-06-10T09:11:00",
+    "closed": "2026-06-15T09:11:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-136"
+  },
+  {
+    "key": "BG-137",
+    "project": "atlas",
+    "title": "Improve Kafka consumer lag handling in data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-07-22T16:28:00",
+    "closed": "2026-07-28T16:28:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-137"
+  },
+  {
+    "key": "BG-138",
+    "project": "atlas",
+    "title": "Upgrade runtime for data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-09-13T09:46:00",
+    "closed": "2026-09-24T09:46:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-138"
+  },
+  {
+    "key": "BG-139",
+    "project": "atlas",
+    "title": "Improve Kafka consumer lag handling in data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "open",
+    "created": "2026-09-27T15:27:00",
+    "closed": null,
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-139"
+  },
+  {
+    "key": "BG-140",
+    "project": "atlas",
+    "title": "Fix flaky integration test in data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-01-24T10:20:00",
+    "closed": "2026-02-03T10:20:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-140"
+  },
+  {
+    "key": "BG-141",
+    "project": "atlas",
+    "title": "Upgrade runtime for data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-04-16T17:18:00",
+    "closed": "2026-04-24T17:18:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-141"
+  },
+  {
+    "key": "BG-142",
+    "project": "atlas",
+    "title": "Fix flaky integration test in data-pipeline",
+    "assignee": "aiko.tanaka",
+    "reporter": "aiko.tanaka",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-08-19T17:46:00",
+    "closed": "2026-08-23T17:46:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-142"
+  },
+  {
+    "key": "BG-143",
+    "project": "atlas",
+    "title": "Upgrade runtime for data-pipeline",
+    "assignee": "ben.carter",
+    "reporter": "ben.carter",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-07-21T09:05:00",
+    "closed": "2026-08-02T09:05:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-143"
+  },
+  {
+    "key": "BG-144",
+    "project": "atlas",
+    "title": "Investigate p99 latency regression in data-pipeline",
+    "assignee": "ben.carter",
+    "reporter": "ben.carter",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-04-05T14:19:00",
+    "closed": "2026-04-17T14:19:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-144"
+  },
+  {
+    "key": "BG-145",
+    "project": "atlas",
+    "title": "Document Kafka consumer lag behaviour of data-pipeline",
+    "assignee": "ben.carter",
+    "reporter": "ben.carter",
+    "components": [
+      "data-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-02-15T09:43:00",
+    "closed": "2026-02-17T09:43:00",
+    "description": "Work item on data-pipeline (Kafka consumer lag).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-145"
+  },
+  {
+    "key": "BG-146",
+    "project": "beacon",
+    "title": "Document canary behaviour of deploy-pipeline",
+    "assignee": "olu.adeyemi",
+    "reporter": "olu.adeyemi",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-02-26T11:48:00",
+    "closed": "2026-03-09T11:48:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-146"
+  },
+  {
+    "key": "BG-147",
+    "project": "beacon",
+    "title": "Investigate p99 latency regression in deploy-pipeline",
+    "assignee": "olu.adeyemi",
+    "reporter": "olu.adeyemi",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-07-24T16:43:00",
+    "closed": "2026-08-03T16:43:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-147"
+  },
+  {
+    "key": "BG-148",
+    "project": "beacon",
+    "title": "Add alerting for deploy-pipeline",
+    "assignee": "olu.adeyemi",
+    "reporter": "olu.adeyemi",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-02-14T10:30:00",
+    "closed": "2026-02-22T10:30:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-148"
+  },
+  {
+    "key": "BG-149",
+    "project": "beacon",
+    "title": "Document canary behaviour of deploy-pipeline",
+    "assignee": "hannah.kim",
+    "reporter": "hannah.kim",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-06-02T14:52:00",
+    "closed": "2026-06-05T14:52:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-149"
+  },
+  {
+    "key": "BG-150",
+    "project": "beacon",
+    "title": "Fix flaky integration test in deploy-pipeline",
+    "assignee": "hannah.kim",
+    "reporter": "hannah.kim",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-05-20T09:23:00",
+    "closed": "2026-05-25T09:23:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-150"
+  },
+  {
+    "key": "BG-151",
+    "project": "beacon",
+    "title": "Improve canary handling in deploy-pipeline",
+    "assignee": "hannah.kim",
+    "reporter": "hannah.kim",
+    "components": [
+      "deploy-pipeline"
+    ],
+    "status": "done",
+    "created": "2026-02-25T11:09:00",
+    "closed": "2026-02-27T11:09:00",
+    "description": "Work item on deploy-pipeline (canary).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-151"
+  },
+  {
+    "key": "BG-152",
+    "project": "swift",
+    "title": "Improve gRPC handling in mobile-app",
+    "assignee": "diego.alvarez",
+    "reporter": "diego.alvarez",
+    "components": [
+      "mobile-app"
+    ],
+    "status": "done",
+    "created": "2026-09-26T14:14:00",
+    "closed": "2026-09-27T14:14:00",
+    "description": "Work item on mobile-app (gRPC).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-152"
+  },
+  {
+    "key": "BG-153",
+    "project": "swift",
+    "title": "Fix flaky integration test in checkout-web",
+    "assignee": "diego.alvarez",
+    "reporter": "diego.alvarez",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "done",
+    "created": "2026-02-10T13:58:00",
+    "closed": "2026-02-18T13:58:00",
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-153"
+  },
+  {
+    "key": "BG-154",
+    "project": "swift",
+    "title": "Fix flaky integration test in checkout-web",
+    "assignee": "diego.alvarez",
+    "reporter": "diego.alvarez",
+    "components": [
+      "checkout-web"
+    ],
+    "status": "done",
+    "created": "2026-06-17T10:01:00",
+    "closed": "2026-06-22T10:01:00",
+    "description": "Work item on checkout-web (idempotency).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-154"
+  },
+  {
+    "key": "BG-155",
+    "project": "swift",
+    "title": "Add alerting for mobile-app",
+    "assignee": "sara.lindqvist",
+    "reporter": "sara.lindqvist",
+    "components": [
+      "mobile-app"
+    ],
+    "status": "done",
+    "created": "2026-02-27T12:56:00",
+    "closed": "2026-02-28T12:56:00",
+    "description": "Work item on mobile-app (gRPC).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-155"
+  },
+  {
+    "key": "BG-156",
+    "project": "swift",
+    "title": "Improve gRPC handling in mobile-app",
+    "assignee": "sara.lindqvist",
+    "reporter": "sara.lindqvist",
+    "components": [
+      "mobile-app"
+    ],
+    "status": "open",
+    "created": "2026-03-13T12:18:00",
+    "closed": null,
+    "description": "Work item on mobile-app (gRPC).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-156"
+  },
+  {
+    "key": "BG-157",
+    "project": "swift",
+    "title": "Upgrade runtime for mobile-app",
+    "assignee": "sara.lindqvist",
+    "reporter": "sara.lindqvist",
+    "components": [
+      "mobile-app"
+    ],
+    "status": "done",
+    "created": "2026-02-07T14:27:00",
+    "closed": "2026-02-14T14:27:00",
+    "description": "Work item on mobile-app (gRPC).",
+    "comments": [],
+    "source": "tracker",
+    "url": "https://tracker.northwind.example/BG-157"
+  }
+]

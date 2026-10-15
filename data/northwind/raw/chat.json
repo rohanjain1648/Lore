@@ -1,0 +1,3220 @@
+[
+  {
+    "id": "th-atlas-graphstore",
+    "channel": "proj-atlas",
+    "source": "chat",
+    "url": "https://chat.northwind.example/proj-atlas/th-atlas-graphstore",
+    "messages": [
+      {
+        "id": "th-atlas-graphstore-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-03-05T10:12:00",
+        "text": "Benchmark for recs-engine is up in ATL-14. FalkorDB vs Neo4j on 3-hop queries over the event graph.",
+        "url": "https://chat.northwind.example/proj-atlas/th-atlas-graphstore#m1"
+      },
+      {
+        "id": "th-atlas-graphstore-m2",
+        "author": "lena.novak",
+        "ts": "2026-03-05T10:20:00",
+        "text": "Nice. FalkorDB numbers look about 4x better on p95. Let's take it to the Atlas architecture review.",
+        "url": "https://chat.northwind.example/proj-atlas/th-atlas-graphstore#m2"
+      },
+      {
+        "id": "th-atlas-graphstore-m3",
+        "author": "chloe.dubois",
+        "ts": "2026-03-05T10:31:00",
+        "text": "Memory footprint is lower too. Cypher support covers everything we need.",
+        "url": "https://chat.northwind.example/proj-atlas/th-atlas-graphstore#m3"
+      },
+      {
+        "id": "th-atlas-graphstore-m4",
+        "author": "aiko.tanaka",
+        "ts": "2026-03-05T11:02:00",
+        "text": "From the data-pipeline side, Kafka consumers can write to either. No blocker.",
+        "url": "https://chat.northwind.example/proj-atlas/th-atlas-graphstore#m4"
+      }
+    ]
+  },
+  {
+    "id": "th-search-handover",
+    "channel": "eng-announcements",
+    "source": "chat",
+    "url": "https://chat.northwind.example/eng-announcements/th-search-handover",
+    "messages": [
+      {
+        "id": "th-search-handover-m1",
+        "author": "lena.novak",
+        "ts": "2026-04-02T09:30:00",
+        "text": "Heads up: search-api is now owned by the Growth team. Ranking work lives with recs, so it makes sense. Ping me or Chloe.",
+        "url": "https://chat.northwind.example/eng-announcements/th-search-handover#m1"
+      },
+      {
+        "id": "th-search-handover-m2",
+        "author": "marco.rossi",
+        "ts": "2026-04-02T09:41:00",
+        "text": "Confirmed from Platform side, handover doc is in the tracker.",
+        "url": "https://chat.northwind.example/eng-announcements/th-search-handover#m2"
+      }
+    ]
+  },
+  {
+    "id": "th-payments-reorg",
+    "channel": "eng-announcements",
+    "source": "chat",
+    "url": "https://chat.northwind.example/eng-announcements/th-payments-reorg",
+    "messages": [
+      {
+        "id": "th-payments-reorg-m1",
+        "author": "nora.fischer",
+        "ts": "2026-06-15T12:00:00",
+        "text": "Reorg update: payments-service is now owned by the Platform team. Marco Rossi is the escalation contact. Payments team focuses on Ledger compliance.",
+        "url": "https://chat.northwind.example/eng-announcements/th-payments-reorg#m1"
+      },
+      {
+        "id": "th-payments-reorg-m2",
+        "author": "priya.sharma",
+        "ts": "2026-06-15T12:08:00",
+        "text": "Thanks Nora. I'll walk Marco's team through the idempotency internals this week.",
+        "url": "https://chat.northwind.example/eng-announcements/th-payments-reorg#m2"
+      },
+      {
+        "id": "th-payments-reorg-m3",
+        "author": "marco.rossi",
+        "ts": "2026-06-15T12:15:00",
+        "text": "Welcome payments-service to Platform. Jonas will be primary on-call for it.",
+        "url": "https://chat.northwind.example/eng-announcements/th-payments-reorg#m3"
+      }
+    ]
+  },
+  {
+    "id": "th-friday-deploys",
+    "channel": "sre",
+    "source": "chat",
+    "url": "https://chat.northwind.example/sre/th-friday-deploys",
+    "messages": [
+      {
+        "id": "th-friday-deploys-m1",
+        "author": "hannah.kim",
+        "ts": "2026-05-08T14:00:00",
+        "text": "Friday deploys are allowed again before 2pm, canary required. Guardrails are live in the deploy-pipeline.",
+        "url": "https://chat.northwind.example/sre/th-friday-deploys#m1"
+      },
+      {
+        "id": "th-friday-deploys-m2",
+        "author": "carlos.mendes",
+        "ts": "2026-05-08T14:05:00",
+        "text": "Great, that unblocks the payments-service hotfix train.",
+        "url": "https://chat.northwind.example/sre/th-friday-deploys#m2"
+      }
+    ]
+  },
+  {
+    "id": "th-inc7",
+    "channel": "incidents",
+    "source": "chat",
+    "url": "https://chat.northwind.example/incidents/th-inc7",
+    "messages": [
+      {
+        "id": "th-inc7-m1",
+        "author": "hannah.kim",
+        "ts": "2026-08-28T13:52:00",
+        "text": "INC-7: card payments failing at checkout. Rolling back the 1:40pm checkout-web deploy.",
+        "url": "https://chat.northwind.example/incidents/th-inc7#m1"
+      },
+      {
+        "id": "th-inc7-m2",
+        "author": "fatima.zahra",
+        "ts": "2026-08-28T14:30:00",
+        "text": "Root cause: checkout-web sent a new payload shape that payments-service rejected. Canary only covered the browse flow.",
+        "url": "https://chat.northwind.example/incidents/th-inc7#m2"
+      },
+      {
+        "id": "th-inc7-m3",
+        "author": "olu.adeyemi",
+        "ts": "2026-08-28T17:10:00",
+        "text": "Resolved after 3 hours. Postmortem Monday. I'm going to propose bringing back the Friday deploy freeze.",
+        "url": "https://chat.northwind.example/incidents/th-inc7#m3"
+      }
+    ]
+  },
+  {
+    "id": "th-sam-leaving",
+    "channel": "platform",
+    "source": "chat",
+    "url": "https://chat.northwind.example/platform/th-sam-leaving",
+    "messages": [
+      {
+        "id": "th-sam-leaving-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-20T10:00:00",
+        "text": "As you know my last day is July 31. I'm writing up the auth-gateway token rotation steps but the SAML refresh is still manual.",
+        "url": "https://chat.northwind.example/platform/th-sam-leaving#m1"
+      },
+      {
+        "id": "th-sam-leaving-m2",
+        "author": "mei.lin",
+        "ts": "2026-07-20T10:15:00",
+        "text": "I can shadow the next token rotation. I haven't touched the SAML metadata job yet.",
+        "url": "https://chat.northwind.example/platform/th-sam-leaving#m2"
+      },
+      {
+        "id": "th-sam-leaving-m3",
+        "author": "marco.rossi",
+        "ts": "2026-07-20T10:20:00",
+        "text": "Thanks Sam. Mei, let's pair on auth-gateway next week.",
+        "url": "https://chat.northwind.example/platform/th-sam-leaving#m3"
+      }
+    ]
+  },
+  {
+    "id": "th-kafka-lag",
+    "channel": "data",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data/th-kafka-lag",
+    "messages": [
+      {
+        "id": "th-kafka-lag-m1",
+        "author": "ben.carter",
+        "ts": "2026-06-03T09:10:00",
+        "text": "Consumer lag on the recs topic is climbing again, 7 minutes.",
+        "url": "https://chat.northwind.example/data/th-kafka-lag#m1"
+      },
+      {
+        "id": "th-kafka-lag-m2",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-03T09:18:00",
+        "text": "It's the partition skew from the user-id key. I'll rebalance the topic partitions on the data-pipeline; we need 12 instead of 6.",
+        "url": "https://chat.northwind.example/data/th-kafka-lag#m2"
+      },
+      {
+        "id": "th-kafka-lag-m3",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-03T11:40:00",
+        "text": "Rebalanced. Kafka consumer lag back under 30s.",
+        "url": "https://chat.northwind.example/data/th-kafka-lag#m3"
+      }
+    ]
+  },
+  {
+    "id": "th-grpc-mobile",
+    "channel": "mobile",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile/th-grpc-mobile",
+    "messages": [
+      {
+        "id": "th-grpc-mobile-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-07-10T15:00:00",
+        "text": "gRPC-web is adding 40% to the mobile-app bundle. Older Android builds crash on the streaming calls.",
+        "url": "https://chat.northwind.example/mobile/th-grpc-mobile#m1"
+      },
+      {
+        "id": "th-grpc-mobile-m2",
+        "author": "diego.alvarez",
+        "ts": "2026-07-10T15:12:00",
+        "text": "Let's put a rollback to REST for mobile on the retro agenda.",
+        "url": "https://chat.northwind.example/mobile/th-grpc-mobile#m2"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-001",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-001",
+    "messages": [
+      {
+        "id": "th-bg-001-m1",
+        "author": "marco.rossi",
+        "ts": "2026-07-09T10:43:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-001#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-002",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-002",
+    "messages": [
+      {
+        "id": "th-bg-002-m1",
+        "author": "marco.rossi",
+        "ts": "2026-01-13T10:13:00",
+        "text": "Added dashboards for auth-gateway; token rotation metrics are in the second row.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-002#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-003",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-003",
+    "messages": [
+      {
+        "id": "th-bg-003-m1",
+        "author": "marco.rossi",
+        "ts": "2026-07-09T13:51:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-003#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-004",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-004",
+    "messages": [
+      {
+        "id": "th-bg-004-m1",
+        "author": "marco.rossi",
+        "ts": "2026-04-06T11:13:00",
+        "text": "Pairing on auth-gateway token rotation edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-004#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-005",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-005",
+    "messages": [
+      {
+        "id": "th-bg-005-m1",
+        "author": "marco.rossi",
+        "ts": "2026-04-17T14:54:00",
+        "text": "Pairing on auth-gateway token rotation edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-005#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-006",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-006",
+    "messages": [
+      {
+        "id": "th-bg-006-m1",
+        "author": "marco.rossi",
+        "ts": "2026-08-09T16:34:00",
+        "text": "Anyone seeing latency spikes on payments-service this morning?",
+        "url": "https://chat.northwind.example/payments-service/th-bg-006#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-007",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-007",
+    "messages": [
+      {
+        "id": "th-bg-007-m1",
+        "author": "marco.rossi",
+        "ts": "2026-06-02T14:36:00",
+        "text": "Added dashboards for search-api; tracing metrics are in the second row.",
+        "url": "https://chat.northwind.example/search-api/th-bg-007#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-008",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-008",
+    "messages": [
+      {
+        "id": "th-bg-008-m1",
+        "author": "marco.rossi",
+        "ts": "2026-07-16T10:54:00",
+        "text": "Added dashboards for payments-service; idempotency metrics are in the second row.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-008#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-009",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-009",
+    "messages": [
+      {
+        "id": "th-bg-009-m1",
+        "author": "marco.rossi",
+        "ts": "2026-03-20T14:10:00",
+        "text": "Pairing on auth-gateway token rotation edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-009#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-010",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-010",
+    "messages": [
+      {
+        "id": "th-bg-010-m1",
+        "author": "marco.rossi",
+        "ts": "2026-07-04T10:38:00",
+        "text": "Reviewed the search-api PR, left a couple of comments on the tracing part.",
+        "url": "https://chat.northwind.example/search-api/th-bg-010#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-011",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-011",
+    "messages": [
+      {
+        "id": "th-bg-011-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-09T15:23:00",
+        "text": "Added dashboards for auth-gateway; token rotation metrics are in the second row.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-011#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-012",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-012",
+    "messages": [
+      {
+        "id": "th-bg-012-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-24T09:55:00",
+        "text": "Anyone seeing latency spikes on auth-gateway this morning?",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-012#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-013",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-013",
+    "messages": [
+      {
+        "id": "th-bg-013-m1",
+        "author": "sam.okafor",
+        "ts": "2026-06-18T15:38:00",
+        "text": "Anyone seeing latency spikes on auth-gateway this morning?",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-013#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-014",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-014",
+    "messages": [
+      {
+        "id": "th-bg-014-m1",
+        "author": "sam.okafor",
+        "ts": "2026-05-08T16:33:00",
+        "text": "auth-gateway release went out cleanly.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-014#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-015",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-015",
+    "messages": [
+      {
+        "id": "th-bg-015-m1",
+        "author": "sam.okafor",
+        "ts": "2026-05-26T17:48:00",
+        "text": "auth-gateway release went out cleanly.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-015#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-016",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-016",
+    "messages": [
+      {
+        "id": "th-bg-016-m1",
+        "author": "sam.okafor",
+        "ts": "2026-03-07T11:29:00",
+        "text": "Pushed a fix for auth-gateway retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-016#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-017",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-017",
+    "messages": [
+      {
+        "id": "th-bg-017-m1",
+        "author": "sam.okafor",
+        "ts": "2026-04-20T10:55:00",
+        "text": "auth-gateway release went out cleanly.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-017#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-018",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-018",
+    "messages": [
+      {
+        "id": "th-bg-018-m1",
+        "author": "sam.okafor",
+        "ts": "2026-03-23T11:34:00",
+        "text": "Bumped dependencies in auth-gateway.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-018#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-019",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-019",
+    "messages": [
+      {
+        "id": "th-bg-019-m1",
+        "author": "sam.okafor",
+        "ts": "2026-04-16T10:59:00",
+        "text": "Pairing on auth-gateway token rotation edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-019#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-020",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-020",
+    "messages": [
+      {
+        "id": "th-bg-020-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-17T10:05:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-020#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-021",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-021",
+    "messages": [
+      {
+        "id": "th-bg-021-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-31T16:35:00",
+        "text": "Reviewed the auth-gateway PR, left a couple of comments on the token rotation part.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-021#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-022",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-022",
+    "messages": [
+      {
+        "id": "th-bg-022-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-23T17:48:00",
+        "text": "Added dashboards for auth-gateway; token rotation metrics are in the second row.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-022#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-023",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-023",
+    "messages": [
+      {
+        "id": "th-bg-023-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-29T14:28:00",
+        "text": "Bumped dependencies in auth-gateway.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-023#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-024",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-024",
+    "messages": [
+      {
+        "id": "th-bg-024-m1",
+        "author": "sam.okafor",
+        "ts": "2026-02-25T10:21:00",
+        "text": "Pushed a fix for auth-gateway retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-024#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-025",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-025",
+    "messages": [
+      {
+        "id": "th-bg-025-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-06T09:14:00",
+        "text": "Anyone seeing latency spikes on auth-gateway this morning?",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-025#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-026",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-026",
+    "messages": [
+      {
+        "id": "th-bg-026-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-20T12:17:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-026#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-027",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-027",
+    "messages": [
+      {
+        "id": "th-bg-027-m1",
+        "author": "sam.okafor",
+        "ts": "2026-06-03T16:15:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-027#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-028",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-028",
+    "messages": [
+      {
+        "id": "th-bg-028-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-24T15:22:00",
+        "text": "Wrote up notes on how auth-gateway handles token rotation.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-028#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-029",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-029",
+    "messages": [
+      {
+        "id": "th-bg-029-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-02T09:43:00",
+        "text": "Anyone seeing latency spikes on auth-gateway this morning?",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-029#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-030",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-030",
+    "messages": [
+      {
+        "id": "th-bg-030-m1",
+        "author": "sam.okafor",
+        "ts": "2026-06-04T10:15:00",
+        "text": "Added dashboards for auth-gateway; token rotation metrics are in the second row.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-030#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-031",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-031",
+    "messages": [
+      {
+        "id": "th-bg-031-m1",
+        "author": "sam.okafor",
+        "ts": "2026-02-03T11:17:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-031#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-032",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-032",
+    "messages": [
+      {
+        "id": "th-bg-032-m1",
+        "author": "sam.okafor",
+        "ts": "2026-04-06T17:06:00",
+        "text": "Pushed a fix for auth-gateway retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-032#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-033",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-033",
+    "messages": [
+      {
+        "id": "th-bg-033-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-15T12:10:00",
+        "text": "Wrote up notes on how auth-gateway handles token rotation.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-033#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-034",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-034",
+    "messages": [
+      {
+        "id": "th-bg-034-m1",
+        "author": "sam.okafor",
+        "ts": "2026-02-18T15:57:00",
+        "text": "Pushed a fix for auth-gateway retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-034#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-035",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-035",
+    "messages": [
+      {
+        "id": "th-bg-035-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-05T15:16:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-035#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-036",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-036",
+    "messages": [
+      {
+        "id": "th-bg-036-m1",
+        "author": "sam.okafor",
+        "ts": "2026-05-29T17:42:00",
+        "text": "Flaky test in auth-gateway again, quarantining it.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-036#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-037",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-037",
+    "messages": [
+      {
+        "id": "th-bg-037-m1",
+        "author": "sam.okafor",
+        "ts": "2026-03-07T09:37:00",
+        "text": "Bumped dependencies in auth-gateway.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-037#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-038",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-038",
+    "messages": [
+      {
+        "id": "th-bg-038-m1",
+        "author": "sam.okafor",
+        "ts": "2026-01-17T16:32:00",
+        "text": "Bumped dependencies in auth-gateway.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-038#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-039",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-039",
+    "messages": [
+      {
+        "id": "th-bg-039-m1",
+        "author": "sam.okafor",
+        "ts": "2026-07-22T10:54:00",
+        "text": "Reviewed the auth-gateway PR, left a couple of comments on the token rotation part.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-039#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-040",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-040",
+    "messages": [
+      {
+        "id": "th-bg-040-m1",
+        "author": "sam.okafor",
+        "ts": "2026-05-24T12:25:00",
+        "text": "Anyone seeing latency spikes on auth-gateway this morning?",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-040#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-041",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-041",
+    "messages": [
+      {
+        "id": "th-bg-041-m1",
+        "author": "jonas.weber",
+        "ts": "2026-06-19T14:37:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-041#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-042",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-042",
+    "messages": [
+      {
+        "id": "th-bg-042-m1",
+        "author": "jonas.weber",
+        "ts": "2026-02-08T13:23:00",
+        "text": "Pushed a fix for search-api retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/search-api/th-bg-042#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-043",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-043",
+    "messages": [
+      {
+        "id": "th-bg-043-m1",
+        "author": "jonas.weber",
+        "ts": "2026-07-07T10:22:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-043#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-044",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-044",
+    "messages": [
+      {
+        "id": "th-bg-044-m1",
+        "author": "jonas.weber",
+        "ts": "2026-09-10T12:55:00",
+        "text": "Reviewed the payments-service PR, left a couple of comments on the idempotency part.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-044#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-045",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-045",
+    "messages": [
+      {
+        "id": "th-bg-045-m1",
+        "author": "jonas.weber",
+        "ts": "2026-01-12T14:50:00",
+        "text": "Wrote up notes on how search-api handles tracing.",
+        "url": "https://chat.northwind.example/search-api/th-bg-045#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-046",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-046",
+    "messages": [
+      {
+        "id": "th-bg-046-m1",
+        "author": "jonas.weber",
+        "ts": "2026-02-17T10:24:00",
+        "text": "Pushed a fix for search-api retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/search-api/th-bg-046#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-047",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-047",
+    "messages": [
+      {
+        "id": "th-bg-047-m1",
+        "author": "jonas.weber",
+        "ts": "2026-07-18T12:14:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-047#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-048",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-048",
+    "messages": [
+      {
+        "id": "th-bg-048-m1",
+        "author": "jonas.weber",
+        "ts": "2026-04-03T10:49:00",
+        "text": "search-api release went out cleanly.",
+        "url": "https://chat.northwind.example/search-api/th-bg-048#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-049",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-049",
+    "messages": [
+      {
+        "id": "th-bg-049-m1",
+        "author": "jonas.weber",
+        "ts": "2026-07-06T17:21:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-049#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-050",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-050",
+    "messages": [
+      {
+        "id": "th-bg-050-m1",
+        "author": "jonas.weber",
+        "ts": "2026-02-22T13:02:00",
+        "text": "Anyone seeing latency spikes on search-api this morning?",
+        "url": "https://chat.northwind.example/search-api/th-bg-050#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-051",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-051",
+    "messages": [
+      {
+        "id": "th-bg-051-m1",
+        "author": "mei.lin",
+        "ts": "2026-07-03T14:25:00",
+        "text": "auth-gateway release went out cleanly.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-051#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-052",
+    "channel": "auth-gateway",
+    "source": "chat",
+    "url": "https://chat.northwind.example/auth-gateway/th-bg-052",
+    "messages": [
+      {
+        "id": "th-bg-052-m1",
+        "author": "mei.lin",
+        "ts": "2026-04-28T15:43:00",
+        "text": "Reviewed the auth-gateway PR, left a couple of comments on the token rotation part.",
+        "url": "https://chat.northwind.example/auth-gateway/th-bg-052#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-053",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-053",
+    "messages": [
+      {
+        "id": "th-bg-053-m1",
+        "author": "priya.sharma",
+        "ts": "2026-05-03T12:32:00",
+        "text": "Flaky test in payments-service again, quarantining it.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-053#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-054",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-054",
+    "messages": [
+      {
+        "id": "th-bg-054-m1",
+        "author": "priya.sharma",
+        "ts": "2026-03-22T14:05:00",
+        "text": "Added dashboards for payments-service; idempotency metrics are in the second row.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-054#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-055",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-055",
+    "messages": [
+      {
+        "id": "th-bg-055-m1",
+        "author": "priya.sharma",
+        "ts": "2026-08-09T11:01:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-055#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-056",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-056",
+    "messages": [
+      {
+        "id": "th-bg-056-m1",
+        "author": "priya.sharma",
+        "ts": "2026-06-18T10:29:00",
+        "text": "Wrote up notes on how payments-service handles PCI tokenization.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-056#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-057",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-057",
+    "messages": [
+      {
+        "id": "th-bg-057-m1",
+        "author": "priya.sharma",
+        "ts": "2026-05-18T12:09:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-057#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-058",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-058",
+    "messages": [
+      {
+        "id": "th-bg-058-m1",
+        "author": "priya.sharma",
+        "ts": "2026-03-05T17:29:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-058#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-059",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-059",
+    "messages": [
+      {
+        "id": "th-bg-059-m1",
+        "author": "priya.sharma",
+        "ts": "2026-05-07T16:42:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-059#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-060",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-060",
+    "messages": [
+      {
+        "id": "th-bg-060-m1",
+        "author": "priya.sharma",
+        "ts": "2026-06-18T17:27:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-060#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-061",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-061",
+    "messages": [
+      {
+        "id": "th-bg-061-m1",
+        "author": "priya.sharma",
+        "ts": "2026-07-23T16:28:00",
+        "text": "payments-service release went out cleanly.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-061#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-062",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-062",
+    "messages": [
+      {
+        "id": "th-bg-062-m1",
+        "author": "priya.sharma",
+        "ts": "2026-07-29T17:31:00",
+        "text": "Added dashboards for payments-service; PCI tokenization metrics are in the second row.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-062#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-063",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-063",
+    "messages": [
+      {
+        "id": "th-bg-063-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-08-23T15:30:00",
+        "text": "Pushed a fix for checkout-web retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-063#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-064",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-064",
+    "messages": [
+      {
+        "id": "th-bg-064-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-07-26T15:34:00",
+        "text": "Bumped dependencies in checkout-web.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-064#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-065",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-065",
+    "messages": [
+      {
+        "id": "th-bg-065-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-03-05T15:31:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-065#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-066",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-066",
+    "messages": [
+      {
+        "id": "th-bg-066-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-07-03T15:46:00",
+        "text": "Reviewed the checkout-web PR, left a couple of comments on the idempotency part.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-066#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-067",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-067",
+    "messages": [
+      {
+        "id": "th-bg-067-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-09-25T17:01:00",
+        "text": "Wrote up notes on how checkout-web handles idempotency.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-067#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-068",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-068",
+    "messages": [
+      {
+        "id": "th-bg-068-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-06-26T11:55:00",
+        "text": "Flaky test in payments-service again, quarantining it.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-068#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-069",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-069",
+    "messages": [
+      {
+        "id": "th-bg-069-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-03-16T14:13:00",
+        "text": "Flaky test in payments-service again, quarantining it.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-069#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-070",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-070",
+    "messages": [
+      {
+        "id": "th-bg-070-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-07-28T15:17:00",
+        "text": "Wrote up notes on how checkout-web handles idempotency.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-070#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-071",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-071",
+    "messages": [
+      {
+        "id": "th-bg-071-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-05-11T17:03:00",
+        "text": "Pairing on checkout-web idempotency edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-071#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-072",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-072",
+    "messages": [
+      {
+        "id": "th-bg-072-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-08-03T09:48:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-072#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-073",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-073",
+    "messages": [
+      {
+        "id": "th-bg-073-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-08-18T11:15:00",
+        "text": "Reviewed the payments-service PR, left a couple of comments on the idempotency part.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-073#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-074",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-074",
+    "messages": [
+      {
+        "id": "th-bg-074-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-06-05T12:29:00",
+        "text": "checkout-web release went out cleanly.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-074#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-075",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-075",
+    "messages": [
+      {
+        "id": "th-bg-075-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-06-16T10:49:00",
+        "text": "Reviewed the checkout-web PR, left a couple of comments on the idempotency part.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-075#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-076",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-076",
+    "messages": [
+      {
+        "id": "th-bg-076-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-06-09T13:36:00",
+        "text": "Wrote up notes on how checkout-web handles idempotency.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-076#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-077",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-077",
+    "messages": [
+      {
+        "id": "th-bg-077-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-01-25T12:06:00",
+        "text": "checkout-web release went out cleanly.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-077#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-078",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-078",
+    "messages": [
+      {
+        "id": "th-bg-078-m1",
+        "author": "carlos.mendes",
+        "ts": "2026-04-08T15:42:00",
+        "text": "Pairing on payments-service idempotency edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-078#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-079",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-079",
+    "messages": [
+      {
+        "id": "th-bg-079-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-08-21T11:31:00",
+        "text": "Added dashboards for checkout-web; idempotency metrics are in the second row.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-079#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-080",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-080",
+    "messages": [
+      {
+        "id": "th-bg-080-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-04-06T13:35:00",
+        "text": "Pushed a fix for payments-service retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-080#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-081",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-081",
+    "messages": [
+      {
+        "id": "th-bg-081-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-03-11T15:31:00",
+        "text": "Bumped dependencies in checkout-web.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-081#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-082",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-082",
+    "messages": [
+      {
+        "id": "th-bg-082-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-06-27T16:28:00",
+        "text": "Pushed a fix for checkout-web retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-082#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-083",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-083",
+    "messages": [
+      {
+        "id": "th-bg-083-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-03-05T12:19:00",
+        "text": "Load test on checkout-web passed at 2x peak.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-083#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-084",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-084",
+    "messages": [
+      {
+        "id": "th-bg-084-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-06-02T14:27:00",
+        "text": "Bumped dependencies in payments-service.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-084#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-085",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-085",
+    "messages": [
+      {
+        "id": "th-bg-085-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-07-13T13:19:00",
+        "text": "payments-service release went out cleanly.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-085#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-086",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-086",
+    "messages": [
+      {
+        "id": "th-bg-086-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-07-17T14:07:00",
+        "text": "Bumped dependencies in checkout-web.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-086#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-087",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-087",
+    "messages": [
+      {
+        "id": "th-bg-087-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-03-04T16:17:00",
+        "text": "Load test on checkout-web passed at 2x peak.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-087#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-088",
+    "channel": "payments-service",
+    "source": "chat",
+    "url": "https://chat.northwind.example/payments-service/th-bg-088",
+    "messages": [
+      {
+        "id": "th-bg-088-m1",
+        "author": "fatima.zahra",
+        "ts": "2026-08-16T13:14:00",
+        "text": "Pairing on payments-service idempotency edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/payments-service/th-bg-088#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-089",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-089",
+    "messages": [
+      {
+        "id": "th-bg-089-m1",
+        "author": "lena.novak",
+        "ts": "2026-01-25T09:09:00",
+        "text": "Reviewed the search-api PR, left a couple of comments on the tracing part.",
+        "url": "https://chat.northwind.example/search-api/th-bg-089#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-090",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-090",
+    "messages": [
+      {
+        "id": "th-bg-090-m1",
+        "author": "lena.novak",
+        "ts": "2026-09-29T10:35:00",
+        "text": "Wrote up notes on how search-api handles tracing.",
+        "url": "https://chat.northwind.example/search-api/th-bg-090#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-091",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-091",
+    "messages": [
+      {
+        "id": "th-bg-091-m1",
+        "author": "lena.novak",
+        "ts": "2026-05-06T16:19:00",
+        "text": "Load test on recs-engine passed at 2x peak.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-091#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-092",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-092",
+    "messages": [
+      {
+        "id": "th-bg-092-m1",
+        "author": "lena.novak",
+        "ts": "2026-06-06T09:39:00",
+        "text": "Anyone seeing latency spikes on search-api this morning?",
+        "url": "https://chat.northwind.example/search-api/th-bg-092#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-093",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-093",
+    "messages": [
+      {
+        "id": "th-bg-093-m1",
+        "author": "lena.novak",
+        "ts": "2026-03-17T10:10:00",
+        "text": "Added dashboards for recs-engine; Cypher query metrics are in the second row.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-093#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-094",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-094",
+    "messages": [
+      {
+        "id": "th-bg-094-m1",
+        "author": "lena.novak",
+        "ts": "2026-02-16T15:28:00",
+        "text": "Load test on recs-engine passed at 2x peak.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-094#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-095",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-095",
+    "messages": [
+      {
+        "id": "th-bg-095-m1",
+        "author": "lena.novak",
+        "ts": "2026-01-14T13:45:00",
+        "text": "search-api release went out cleanly.",
+        "url": "https://chat.northwind.example/search-api/th-bg-095#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-096",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-096",
+    "messages": [
+      {
+        "id": "th-bg-096-m1",
+        "author": "lena.novak",
+        "ts": "2026-07-08T13:50:00",
+        "text": "Load test on search-api passed at 2x peak.",
+        "url": "https://chat.northwind.example/search-api/th-bg-096#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-097",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-097",
+    "messages": [
+      {
+        "id": "th-bg-097-m1",
+        "author": "lena.novak",
+        "ts": "2026-02-05T12:41:00",
+        "text": "Reviewed the recs-engine PR, left a couple of comments on the Cypher query part.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-097#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-098",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-098",
+    "messages": [
+      {
+        "id": "th-bg-098-m1",
+        "author": "lena.novak",
+        "ts": "2026-01-24T11:50:00",
+        "text": "search-api release went out cleanly.",
+        "url": "https://chat.northwind.example/search-api/th-bg-098#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-099",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-099",
+    "messages": [
+      {
+        "id": "th-bg-099-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-05-11T16:58:00",
+        "text": "recs-engine release went out cleanly.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-099#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-100",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-100",
+    "messages": [
+      {
+        "id": "th-bg-100-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-06-24T16:05:00",
+        "text": "Flaky test in recs-engine again, quarantining it.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-100#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-101",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-101",
+    "messages": [
+      {
+        "id": "th-bg-101-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-04-04T10:54:00",
+        "text": "Reviewed the recs-engine PR, left a couple of comments on the Cypher query part.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-101#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-102",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-102",
+    "messages": [
+      {
+        "id": "th-bg-102-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-07-10T13:42:00",
+        "text": "Wrote up notes on how recs-engine handles Cypher query.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-102#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-103",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-103",
+    "messages": [
+      {
+        "id": "th-bg-103-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-01-29T13:20:00",
+        "text": "Anyone seeing latency spikes on recs-engine this morning?",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-103#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-104",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-104",
+    "messages": [
+      {
+        "id": "th-bg-104-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-06-30T17:29:00",
+        "text": "Wrote up notes on how recs-engine handles Cypher query.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-104#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-105",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-105",
+    "messages": [
+      {
+        "id": "th-bg-105-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-05-24T16:40:00",
+        "text": "Flaky test in recs-engine again, quarantining it.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-105#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-106",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-106",
+    "messages": [
+      {
+        "id": "th-bg-106-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-03-18T11:59:00",
+        "text": "recs-engine release went out cleanly.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-106#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-107",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-107",
+    "messages": [
+      {
+        "id": "th-bg-107-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-02-06T12:45:00",
+        "text": "Reviewed the recs-engine PR, left a couple of comments on the Cypher query part.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-107#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-108",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-108",
+    "messages": [
+      {
+        "id": "th-bg-108-m1",
+        "author": "arjun.mehta",
+        "ts": "2026-06-02T10:14:00",
+        "text": "Anyone seeing latency spikes on recs-engine this morning?",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-108#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-109",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-109",
+    "messages": [
+      {
+        "id": "th-bg-109-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-03-22T13:53:00",
+        "text": "Load test on search-api passed at 2x peak.",
+        "url": "https://chat.northwind.example/search-api/th-bg-109#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-110",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-110",
+    "messages": [
+      {
+        "id": "th-bg-110-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-05-05T16:22:00",
+        "text": "Pairing on search-api tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/search-api/th-bg-110#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-111",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-111",
+    "messages": [
+      {
+        "id": "th-bg-111-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-09-12T12:44:00",
+        "text": "Added dashboards for search-api; tracing metrics are in the second row.",
+        "url": "https://chat.northwind.example/search-api/th-bg-111#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-112",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-112",
+    "messages": [
+      {
+        "id": "th-bg-112-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-08-23T15:02:00",
+        "text": "Pairing on search-api tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/search-api/th-bg-112#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-113",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-113",
+    "messages": [
+      {
+        "id": "th-bg-113-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-04-18T11:31:00",
+        "text": "Pushed a fix for search-api retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/search-api/th-bg-113#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-114",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-114",
+    "messages": [
+      {
+        "id": "th-bg-114-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-08-26T16:06:00",
+        "text": "Bumped dependencies in recs-engine.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-114#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-115",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-115",
+    "messages": [
+      {
+        "id": "th-bg-115-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-07-18T15:55:00",
+        "text": "Reviewed the search-api PR, left a couple of comments on the tracing part.",
+        "url": "https://chat.northwind.example/search-api/th-bg-115#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-116",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-116",
+    "messages": [
+      {
+        "id": "th-bg-116-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-08-03T13:21:00",
+        "text": "Load test on recs-engine passed at 2x peak.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-116#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-117",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-117",
+    "messages": [
+      {
+        "id": "th-bg-117-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-08-21T17:24:00",
+        "text": "Pairing on search-api tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/search-api/th-bg-117#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-118",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-118",
+    "messages": [
+      {
+        "id": "th-bg-118-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-06-20T12:40:00",
+        "text": "search-api release went out cleanly.",
+        "url": "https://chat.northwind.example/search-api/th-bg-118#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-119",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-119",
+    "messages": [
+      {
+        "id": "th-bg-119-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-05-01T10:48:00",
+        "text": "Anyone seeing latency spikes on recs-engine this morning?",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-119#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-120",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-120",
+    "messages": [
+      {
+        "id": "th-bg-120-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-07-10T09:02:00",
+        "text": "Pairing on search-api tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/search-api/th-bg-120#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-121",
+    "channel": "recs-engine",
+    "source": "chat",
+    "url": "https://chat.northwind.example/recs-engine/th-bg-121",
+    "messages": [
+      {
+        "id": "th-bg-121-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-04-11T15:09:00",
+        "text": "Added dashboards for recs-engine; Cypher query metrics are in the second row.",
+        "url": "https://chat.northwind.example/recs-engine/th-bg-121#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-122",
+    "channel": "search-api",
+    "source": "chat",
+    "url": "https://chat.northwind.example/search-api/th-bg-122",
+    "messages": [
+      {
+        "id": "th-bg-122-m1",
+        "author": "chloe.dubois",
+        "ts": "2026-02-19T10:39:00",
+        "text": "Wrote up notes on how search-api handles tracing.",
+        "url": "https://chat.northwind.example/search-api/th-bg-122#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-123",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-123",
+    "messages": [
+      {
+        "id": "th-bg-123-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-09-28T13:01:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-123#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-124",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-124",
+    "messages": [
+      {
+        "id": "th-bg-124-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-06T09:58:00",
+        "text": "Load test on data-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-124#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-125",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-125",
+    "messages": [
+      {
+        "id": "th-bg-125-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-08-01T12:38:00",
+        "text": "Pairing on data-pipeline Kafka consumer lag edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-125#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-126",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-126",
+    "messages": [
+      {
+        "id": "th-bg-126-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-21T11:40:00",
+        "text": "Anyone seeing latency spikes on data-pipeline this morning?",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-126#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-127",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-127",
+    "messages": [
+      {
+        "id": "th-bg-127-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-08-05T09:37:00",
+        "text": "Pairing on data-pipeline Kafka consumer lag edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-127#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-128",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-128",
+    "messages": [
+      {
+        "id": "th-bg-128-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-09-06T14:47:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-128#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-129",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-129",
+    "messages": [
+      {
+        "id": "th-bg-129-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-02-09T17:56:00",
+        "text": "Pairing on data-pipeline Kafka consumer lag edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-129#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-130",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-130",
+    "messages": [
+      {
+        "id": "th-bg-130-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-03-15T16:51:00",
+        "text": "data-pipeline release went out cleanly.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-130#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-131",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-131",
+    "messages": [
+      {
+        "id": "th-bg-131-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-05-11T10:09:00",
+        "text": "Added dashboards for data-pipeline; Kafka consumer lag metrics are in the second row.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-131#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-132",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-132",
+    "messages": [
+      {
+        "id": "th-bg-132-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-01-29T15:00:00",
+        "text": "data-pipeline release went out cleanly.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-132#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-133",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-133",
+    "messages": [
+      {
+        "id": "th-bg-133-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-04-14T13:37:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-133#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-134",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-134",
+    "messages": [
+      {
+        "id": "th-bg-134-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-07-05T16:01:00",
+        "text": "Load test on data-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-134#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-135",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-135",
+    "messages": [
+      {
+        "id": "th-bg-135-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-28T16:58:00",
+        "text": "data-pipeline release went out cleanly.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-135#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-136",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-136",
+    "messages": [
+      {
+        "id": "th-bg-136-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-02-11T09:19:00",
+        "text": "Flaky test in data-pipeline again, quarantining it.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-136#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-137",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-137",
+    "messages": [
+      {
+        "id": "th-bg-137-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-03-09T17:08:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-137#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-138",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-138",
+    "messages": [
+      {
+        "id": "th-bg-138-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-07-04T17:26:00",
+        "text": "Load test on data-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-138#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-139",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-139",
+    "messages": [
+      {
+        "id": "th-bg-139-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-30T16:39:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-139#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-140",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-140",
+    "messages": [
+      {
+        "id": "th-bg-140-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-07-09T12:28:00",
+        "text": "Flaky test in data-pipeline again, quarantining it.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-140#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-141",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-141",
+    "messages": [
+      {
+        "id": "th-bg-141-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-02-01T14:34:00",
+        "text": "Pairing on data-pipeline Kafka consumer lag edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-141#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-142",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-142",
+    "messages": [
+      {
+        "id": "th-bg-142-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-03-20T10:54:00",
+        "text": "Flaky test in data-pipeline again, quarantining it.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-142#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-143",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-143",
+    "messages": [
+      {
+        "id": "th-bg-143-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-06-26T09:03:00",
+        "text": "Pairing on data-pipeline Kafka consumer lag edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-143#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-144",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-144",
+    "messages": [
+      {
+        "id": "th-bg-144-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-08-04T12:04:00",
+        "text": "Bumped dependencies in data-pipeline.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-144#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-145",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-145",
+    "messages": [
+      {
+        "id": "th-bg-145-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-08-11T12:21:00",
+        "text": "Reviewed the data-pipeline PR, left a couple of comments on the Kafka consumer lag part.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-145#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-146",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-146",
+    "messages": [
+      {
+        "id": "th-bg-146-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-08-23T11:08:00",
+        "text": "Bumped dependencies in data-pipeline.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-146#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-147",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-147",
+    "messages": [
+      {
+        "id": "th-bg-147-m1",
+        "author": "aiko.tanaka",
+        "ts": "2026-02-03T09:08:00",
+        "text": "Pushed a fix for data-pipeline retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-147#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-148",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-148",
+    "messages": [
+      {
+        "id": "th-bg-148-m1",
+        "author": "ben.carter",
+        "ts": "2026-08-15T15:26:00",
+        "text": "Anyone seeing latency spikes on data-pipeline this morning?",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-148#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-149",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-149",
+    "messages": [
+      {
+        "id": "th-bg-149-m1",
+        "author": "ben.carter",
+        "ts": "2026-03-30T13:23:00",
+        "text": "Reviewed the data-pipeline PR, left a couple of comments on the Kafka consumer lag part.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-149#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-150",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-150",
+    "messages": [
+      {
+        "id": "th-bg-150-m1",
+        "author": "ben.carter",
+        "ts": "2026-01-29T10:05:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-150#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-151",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-151",
+    "messages": [
+      {
+        "id": "th-bg-151-m1",
+        "author": "ben.carter",
+        "ts": "2026-08-11T17:03:00",
+        "text": "Load test on data-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-151#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-152",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-152",
+    "messages": [
+      {
+        "id": "th-bg-152-m1",
+        "author": "ben.carter",
+        "ts": "2026-04-25T15:55:00",
+        "text": "Pushed a fix for data-pipeline retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-152#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-153",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-153",
+    "messages": [
+      {
+        "id": "th-bg-153-m1",
+        "author": "ben.carter",
+        "ts": "2026-04-09T17:13:00",
+        "text": "Reviewed the data-pipeline PR, left a couple of comments on the Kafka consumer lag part.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-153#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-154",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-154",
+    "messages": [
+      {
+        "id": "th-bg-154-m1",
+        "author": "ben.carter",
+        "ts": "2026-08-20T14:54:00",
+        "text": "Bumped dependencies in data-pipeline.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-154#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-155",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-155",
+    "messages": [
+      {
+        "id": "th-bg-155-m1",
+        "author": "ben.carter",
+        "ts": "2026-07-29T12:51:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-155#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-156",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-156",
+    "messages": [
+      {
+        "id": "th-bg-156-m1",
+        "author": "ben.carter",
+        "ts": "2026-01-13T13:44:00",
+        "text": "data-pipeline release went out cleanly.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-156#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-157",
+    "channel": "data-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/data-pipeline/th-bg-157",
+    "messages": [
+      {
+        "id": "th-bg-157-m1",
+        "author": "ben.carter",
+        "ts": "2026-01-07T11:36:00",
+        "text": "Wrote up notes on how data-pipeline handles Kafka consumer lag.",
+        "url": "https://chat.northwind.example/data-pipeline/th-bg-157#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-158",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-158",
+    "messages": [
+      {
+        "id": "th-bg-158-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-06-17T15:17:00",
+        "text": "Added dashboards for deploy-pipeline; canary metrics are in the second row.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-158#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-159",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-159",
+    "messages": [
+      {
+        "id": "th-bg-159-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-30T13:43:00",
+        "text": "Load test on deploy-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-159#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-160",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-160",
+    "messages": [
+      {
+        "id": "th-bg-160-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-01-17T15:38:00",
+        "text": "Pushed a fix for deploy-pipeline retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-160#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-161",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-161",
+    "messages": [
+      {
+        "id": "th-bg-161-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-03-27T12:49:00",
+        "text": "Reviewed the deploy-pipeline PR, left a couple of comments on the tracing part.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-161#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-162",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-162",
+    "messages": [
+      {
+        "id": "th-bg-162-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-03T09:31:00",
+        "text": "Wrote up notes on how deploy-pipeline handles canary.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-162#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-163",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-163",
+    "messages": [
+      {
+        "id": "th-bg-163-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-17T12:32:00",
+        "text": "Bumped dependencies in deploy-pipeline.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-163#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-164",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-164",
+    "messages": [
+      {
+        "id": "th-bg-164-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-21T09:27:00",
+        "text": "Pushed a fix for deploy-pipeline retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-164#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-165",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-165",
+    "messages": [
+      {
+        "id": "th-bg-165-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-08-24T15:36:00",
+        "text": "Wrote up notes on how deploy-pipeline handles tracing.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-165#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-166",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-166",
+    "messages": [
+      {
+        "id": "th-bg-166-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-02-05T09:20:00",
+        "text": "Reviewed the deploy-pipeline PR, left a couple of comments on the canary part.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-166#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-167",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-167",
+    "messages": [
+      {
+        "id": "th-bg-167-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-01-29T10:15:00",
+        "text": "Wrote up notes on how deploy-pipeline handles canary.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-167#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-168",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-168",
+    "messages": [
+      {
+        "id": "th-bg-168-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-21T13:47:00",
+        "text": "Pairing on deploy-pipeline tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-168#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-169",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-169",
+    "messages": [
+      {
+        "id": "th-bg-169-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-08-02T10:32:00",
+        "text": "Anyone seeing latency spikes on deploy-pipeline this morning?",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-169#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-170",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-170",
+    "messages": [
+      {
+        "id": "th-bg-170-m1",
+        "author": "olu.adeyemi",
+        "ts": "2026-04-09T11:15:00",
+        "text": "Anyone seeing latency spikes on deploy-pipeline this morning?",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-170#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-171",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-171",
+    "messages": [
+      {
+        "id": "th-bg-171-m1",
+        "author": "hannah.kim",
+        "ts": "2026-05-21T13:29:00",
+        "text": "Flaky test in deploy-pipeline again, quarantining it.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-171#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-172",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-172",
+    "messages": [
+      {
+        "id": "th-bg-172-m1",
+        "author": "hannah.kim",
+        "ts": "2026-04-14T13:04:00",
+        "text": "Anyone seeing latency spikes on deploy-pipeline this morning?",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-172#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-173",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-173",
+    "messages": [
+      {
+        "id": "th-bg-173-m1",
+        "author": "hannah.kim",
+        "ts": "2026-06-10T09:28:00",
+        "text": "Load test on deploy-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-173#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-174",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-174",
+    "messages": [
+      {
+        "id": "th-bg-174-m1",
+        "author": "hannah.kim",
+        "ts": "2026-06-16T17:09:00",
+        "text": "Pushed a fix for deploy-pipeline retry handling, should cut the error rate.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-174#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-175",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-175",
+    "messages": [
+      {
+        "id": "th-bg-175-m1",
+        "author": "hannah.kim",
+        "ts": "2026-08-11T14:45:00",
+        "text": "Anyone seeing latency spikes on deploy-pipeline this morning?",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-175#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-176",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-176",
+    "messages": [
+      {
+        "id": "th-bg-176-m1",
+        "author": "hannah.kim",
+        "ts": "2026-03-12T16:28:00",
+        "text": "Bumped dependencies in deploy-pipeline.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-176#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-177",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-177",
+    "messages": [
+      {
+        "id": "th-bg-177-m1",
+        "author": "hannah.kim",
+        "ts": "2026-04-15T13:24:00",
+        "text": "Wrote up notes on how deploy-pipeline handles canary.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-177#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-178",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-178",
+    "messages": [
+      {
+        "id": "th-bg-178-m1",
+        "author": "hannah.kim",
+        "ts": "2026-08-05T14:04:00",
+        "text": "Pairing on deploy-pipeline tracing edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-178#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-179",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-179",
+    "messages": [
+      {
+        "id": "th-bg-179-m1",
+        "author": "hannah.kim",
+        "ts": "2026-03-22T11:21:00",
+        "text": "Anyone seeing latency spikes on deploy-pipeline this morning?",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-179#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-180",
+    "channel": "deploy-pipeline",
+    "source": "chat",
+    "url": "https://chat.northwind.example/deploy-pipeline/th-bg-180",
+    "messages": [
+      {
+        "id": "th-bg-180-m1",
+        "author": "hannah.kim",
+        "ts": "2026-03-29T15:08:00",
+        "text": "Load test on deploy-pipeline passed at 2x peak.",
+        "url": "https://chat.northwind.example/deploy-pipeline/th-bg-180#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-181",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-181",
+    "messages": [
+      {
+        "id": "th-bg-181-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-08-28T11:38:00",
+        "text": "Wrote up notes on how mobile-app handles gRPC.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-181#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-182",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-182",
+    "messages": [
+      {
+        "id": "th-bg-182-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-02-22T11:46:00",
+        "text": "Flaky test in mobile-app again, quarantining it.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-182#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-183",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-183",
+    "messages": [
+      {
+        "id": "th-bg-183-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-04-13T12:28:00",
+        "text": "Load test on mobile-app passed at 2x peak.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-183#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-184",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-184",
+    "messages": [
+      {
+        "id": "th-bg-184-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-03-09T12:19:00",
+        "text": "Flaky test in checkout-web again, quarantining it.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-184#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-185",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-185",
+    "messages": [
+      {
+        "id": "th-bg-185-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-07-06T16:29:00",
+        "text": "mobile-app release went out cleanly.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-185#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-186",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-186",
+    "messages": [
+      {
+        "id": "th-bg-186-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-09-21T12:51:00",
+        "text": "Load test on checkout-web passed at 2x peak.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-186#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-187",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-187",
+    "messages": [
+      {
+        "id": "th-bg-187-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-01-19T16:55:00",
+        "text": "Pairing on mobile-app gRPC edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-187#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-188",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-188",
+    "messages": [
+      {
+        "id": "th-bg-188-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-03-22T11:17:00",
+        "text": "Flaky test in mobile-app again, quarantining it.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-188#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-189",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-189",
+    "messages": [
+      {
+        "id": "th-bg-189-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-01-29T12:52:00",
+        "text": "Flaky test in mobile-app again, quarantining it.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-189#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-190",
+    "channel": "checkout-web",
+    "source": "chat",
+    "url": "https://chat.northwind.example/checkout-web/th-bg-190",
+    "messages": [
+      {
+        "id": "th-bg-190-m1",
+        "author": "diego.alvarez",
+        "ts": "2026-04-26T15:32:00",
+        "text": "Pairing on checkout-web idempotency edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/checkout-web/th-bg-190#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-191",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-191",
+    "messages": [
+      {
+        "id": "th-bg-191-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-08-01T12:19:00",
+        "text": "Anyone seeing latency spikes on mobile-app this morning?",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-191#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-192",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-192",
+    "messages": [
+      {
+        "id": "th-bg-192-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-04-28T16:04:00",
+        "text": "Anyone seeing latency spikes on mobile-app this morning?",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-192#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-193",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-193",
+    "messages": [
+      {
+        "id": "th-bg-193-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-06-23T12:45:00",
+        "text": "Reviewed the mobile-app PR, left a couple of comments on the gRPC part.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-193#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-194",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-194",
+    "messages": [
+      {
+        "id": "th-bg-194-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-01-05T14:15:00",
+        "text": "Load test on mobile-app passed at 2x peak.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-194#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-195",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-195",
+    "messages": [
+      {
+        "id": "th-bg-195-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-07-02T10:33:00",
+        "text": "Pairing on mobile-app gRPC edge cases this afternoon if anyone wants to join.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-195#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-196",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-196",
+    "messages": [
+      {
+        "id": "th-bg-196-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-04-20T16:02:00",
+        "text": "Wrote up notes on how mobile-app handles gRPC.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-196#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-197",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-197",
+    "messages": [
+      {
+        "id": "th-bg-197-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-07-24T14:50:00",
+        "text": "Anyone seeing latency spikes on mobile-app this morning?",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-197#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-198",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-198",
+    "messages": [
+      {
+        "id": "th-bg-198-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-07-21T10:49:00",
+        "text": "Load test on mobile-app passed at 2x peak.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-198#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-199",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-199",
+    "messages": [
+      {
+        "id": "th-bg-199-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-01-17T17:21:00",
+        "text": "Reviewed the mobile-app PR, left a couple of comments on the gRPC part.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-199#m1"
+      }
+    ]
+  },
+  {
+    "id": "th-bg-200",
+    "channel": "mobile-app",
+    "source": "chat",
+    "url": "https://chat.northwind.example/mobile-app/th-bg-200",
+    "messages": [
+      {
+        "id": "th-bg-200-m1",
+        "author": "sara.lindqvist",
+        "ts": "2026-06-23T11:04:00",
+        "text": "Flaky test in mobile-app again, quarantining it.",
+        "url": "https://chat.northwind.example/mobile-app/th-bg-200#m1"
+      }
+    ]
+  }
+]

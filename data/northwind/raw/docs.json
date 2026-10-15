@@ -1,0 +1,83 @@
+[
+  {
+    "id": "doc-team-directory",
+    "title": "Engineering Team Directory",
+    "author": "nora.fischer",
+    "updated_at": "2026-01-10T10:00:00",
+    "body": "# Engineering Team Directory\n\nWho to talk to for each system. Keep this page current.\n\n## Ownership\nThe Payments team owns payments-service. Contact Priya Sharma.\nThe Payments team owns checkout-web.\nThe Platform team owns auth-gateway. Sam Okafor is the primary engineer.\nThe Platform team owns search-api.\nThe Growth team owns recs-engine.\nThe Data team owns data-pipeline. Aiko Tanaka runs the Kafka cluster.\nThe SRE team owns deploy-pipeline.\nThe Mobile team owns mobile-app.\n\n## Escalation\nFor production incidents page the on-call SRE first, then the owning team.\n",
+    "url": "https://wiki.northwind.example/doc-team-directory",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-payments-runbook",
+    "title": "Payments Service Runbook",
+    "author": "priya.sharma",
+    "updated_at": "2026-02-18T15:30:00",
+    "body": "# Payments Service Runbook\n\n## Ownership\npayments-service is owned by the Payments team. Contact Priya Sharma for anything urgent.\n\n## Retries and idempotency\nEvery charge request carries an idempotency key. Retries reuse the same key so a retry storm\ncan never create a duplicate charge. Keys expire after 24 hours.\n\n## PCI\nCard data never touches payments-service directly; tokenization happens at the vault.\n",
+    "url": "https://wiki.northwind.example/doc-payments-runbook",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-deploy-policy",
+    "title": "Deployment Policy",
+    "author": "olu.adeyemi",
+    "updated_at": "2026-01-20T11:00:00",
+    "body": "# Deployment Policy\n\nPolicy: no production deploys on Fridays. Changes merged on Friday ship on Monday.\n\n## Release process\nAll services ship through the deploy-pipeline with automated rollbacks.\nCanary releases are recommended for user-facing services.\n",
+    "url": "https://wiki.northwind.example/doc-deploy-policy",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-auth-gateway-design",
+    "title": "auth-gateway Design Notes",
+    "author": "sam.okafor",
+    "updated_at": "2026-03-03T09:20:00",
+    "body": "# auth-gateway Design Notes\n\nauth-gateway terminates SSO (SAML and OAuth) and issues short-lived JWT access tokens.\n\n## Token rotation\nSigning keys rotate every 30 days. The rotation job lives in auth-gateway/rotation and only\nSam Okafor has run it in production so far. The procedure is not automated yet.\n\n## Known sharp edges\nThe SAML metadata refresh is manual. If it lapses, enterprise SSO logins fail.\n",
+    "url": "https://wiki.northwind.example/doc-auth-gateway-design",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-atlas-architecture",
+    "title": "Project Atlas Architecture",
+    "author": "lena.novak",
+    "updated_at": "2026-03-20T14:00:00",
+    "body": "# Project Atlas Architecture\n\nrecs-engine v2 models users, items and sessions as a graph and serves recommendations with\nmulti-hop Cypher queries. Events arrive from the data-pipeline over Kafka.\n\n## Graph store\nWe use FalkorDB as the graph store for recs-engine, chosen at the Atlas architecture review\non 2026-03-12. See ATL-14 for the benchmark.\n",
+    "url": "https://wiki.northwind.example/doc-atlas-architecture",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-data-pipeline-guide",
+    "title": "Data Pipeline Guide",
+    "author": "aiko.tanaka",
+    "updated_at": "2026-04-15T10:00:00",
+    "body": "# Data Pipeline Guide\n\nThe data-pipeline is a Kafka cluster with 3 brokers. Topic partitions are keyed by user id.\nConsumer lag alerts fire at 5 minutes.\n\n## Contacts\nAiko Tanaka designed the Kafka topology. Ben Carter handles schema registry changes.\n",
+    "url": "https://wiki.northwind.example/doc-data-pipeline-guide",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-api-guidelines",
+    "title": "Internal API Guidelines",
+    "author": "marco.rossi",
+    "updated_at": "2026-02-12T16:00:00",
+    "body": "# Internal API Guidelines\n\nInternal service-to-service calls use gRPC with protobuf contracts.\nPolicy: mobile-facing APIs use gRPC-web through the edge proxy.\n",
+    "url": "https://wiki.northwind.example/doc-api-guidelines",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-oncall",
+    "title": "On-call Handbook",
+    "author": "hannah.kim",
+    "updated_at": "2026-05-02T09:00:00",
+    "body": "# On-call Handbook\n\nSRE runs primary on-call. Dashboards live in Grafana; tracing uses OpenTelemetry.\nEvery alert must link to a runbook. SLO burn alerts page immediately.\n",
+    "url": "https://wiki.northwind.example/doc-oncall",
+    "source": "wiki"
+  },
+  {
+    "id": "doc-swift-plan",
+    "title": "Project Swift Plan",
+    "author": "diego.alvarez",
+    "updated_at": "2026-04-28T13:00:00",
+    "body": "# Project Swift Plan\n\nOne-tap checkout in the mobile-app, backed by checkout-web and payments-service.\nLaunch target: end of Q3. Depends on idempotency guarantees in payments-service.\n",
+    "url": "https://wiki.northwind.example/doc-swift-plan",
+    "source": "wiki"
+  }
+]

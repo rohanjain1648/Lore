@@ -1,0 +1,404 @@
+{
+  "company": "Northwind Labs",
+  "now": "2026-09-30T18:00:00",
+  "teams": [
+    {
+      "id": "team-leadership",
+      "name": "Leadership"
+    },
+    {
+      "id": "team-platform",
+      "name": "Platform team"
+    },
+    {
+      "id": "team-payments",
+      "name": "Payments team"
+    },
+    {
+      "id": "team-growth",
+      "name": "Growth team"
+    },
+    {
+      "id": "team-data",
+      "name": "Data team"
+    },
+    {
+      "id": "team-sre",
+      "name": "SRE team"
+    },
+    {
+      "id": "team-mobile",
+      "name": "Mobile team"
+    }
+  ],
+  "people": [
+    {
+      "id": "dev.patel",
+      "name": "Dev Patel",
+      "handle": "dev",
+      "team": "team-leadership",
+      "role": "CTO",
+      "left_at": null
+    },
+    {
+      "id": "nora.fischer",
+      "name": "Nora Fischer",
+      "handle": "nora",
+      "team": "team-leadership",
+      "role": "VP Engineering",
+      "left_at": null
+    },
+    {
+      "id": "marco.rossi",
+      "name": "Marco Rossi",
+      "handle": "marco",
+      "team": "team-platform",
+      "role": "Engineering Manager, Platform",
+      "left_at": null
+    },
+    {
+      "id": "sam.okafor",
+      "name": "Sam Okafor",
+      "handle": "sam",
+      "team": "team-platform",
+      "role": "Senior Engineer",
+      "left_at": "2026-07-31"
+    },
+    {
+      "id": "jonas.weber",
+      "name": "Jonas Weber",
+      "handle": "jonas",
+      "team": "team-platform",
+      "role": "Engineer",
+      "left_at": null
+    },
+    {
+      "id": "mei.lin",
+      "name": "Mei Lin",
+      "handle": "mei",
+      "team": "team-platform",
+      "role": "Junior Engineer",
+      "left_at": null
+    },
+    {
+      "id": "priya.sharma",
+      "name": "Priya Sharma",
+      "handle": "priya",
+      "team": "team-payments",
+      "role": "Engineering Manager, Payments",
+      "left_at": null
+    },
+    {
+      "id": "carlos.mendes",
+      "name": "Carlos Mendes",
+      "handle": "carlos",
+      "team": "team-payments",
+      "role": "Senior Engineer",
+      "left_at": null
+    },
+    {
+      "id": "fatima.zahra",
+      "name": "Fatima Zahra",
+      "handle": "fatima",
+      "team": "team-payments",
+      "role": "Engineer",
+      "left_at": null
+    },
+    {
+      "id": "lena.novak",
+      "name": "Lena Novak",
+      "handle": "lena",
+      "team": "team-growth",
+      "role": "Tech Lead, Growth",
+      "left_at": null
+    },
+    {
+      "id": "arjun.mehta",
+      "name": "Arjun Mehta",
+      "handle": "arjun",
+      "team": "team-growth",
+      "role": "ML Engineer",
+      "left_at": null
+    },
+    {
+      "id": "chloe.dubois",
+      "name": "Chloe Dubois",
+      "handle": "chloe",
+      "team": "team-growth",
+      "role": "Engineer",
+      "left_at": null
+    },
+    {
+      "id": "aiko.tanaka",
+      "name": "Aiko Tanaka",
+      "handle": "aiko",
+      "team": "team-data",
+      "role": "Staff Data Engineer",
+      "left_at": null
+    },
+    {
+      "id": "ben.carter",
+      "name": "Ben Carter",
+      "handle": "ben",
+      "team": "team-data",
+      "role": "Data Engineer",
+      "left_at": null
+    },
+    {
+      "id": "olu.adeyemi",
+      "name": "Olu Adeyemi",
+      "handle": "olu",
+      "team": "team-sre",
+      "role": "SRE Lead",
+      "left_at": null
+    },
+    {
+      "id": "hannah.kim",
+      "name": "Hannah Kim",
+      "handle": "hannah",
+      "team": "team-sre",
+      "role": "SRE",
+      "left_at": null
+    },
+    {
+      "id": "diego.alvarez",
+      "name": "Diego Alvarez",
+      "handle": "diego",
+      "team": "team-mobile",
+      "role": "Mobile Lead",
+      "left_at": null
+    },
+    {
+      "id": "sara.lindqvist",
+      "name": "Sara Lindqvist",
+      "handle": "sara",
+      "team": "team-mobile",
+      "role": "iOS Engineer",
+      "left_at": null
+    }
+  ],
+  "systems": [
+    {
+      "id": "payments-service",
+      "name": "payments-service",
+      "kind": "service",
+      "aliases": [
+        "payments service",
+        "payment service",
+        "payments api"
+      ]
+    },
+    {
+      "id": "auth-gateway",
+      "name": "auth-gateway",
+      "kind": "service",
+      "aliases": [
+        "auth gateway",
+        "auth service",
+        "sso gateway"
+      ]
+    },
+    {
+      "id": "recs-engine",
+      "name": "recs-engine",
+      "kind": "service",
+      "aliases": [
+        "recs engine",
+        "recommendation engine",
+        "recommendations engine",
+        "recommendations service"
+      ]
+    },
+    {
+      "id": "checkout-web",
+      "name": "checkout-web",
+      "kind": "frontend",
+      "aliases": [
+        "checkout web",
+        "web checkout",
+        "checkout frontend"
+      ]
+    },
+    {
+      "id": "data-pipeline",
+      "name": "data-pipeline",
+      "kind": "infra",
+      "aliases": [
+        "data pipeline",
+        "event pipeline",
+        "kafka pipeline"
+      ]
+    },
+    {
+      "id": "deploy-pipeline",
+      "name": "deploy-pipeline",
+      "kind": "infra",
+      "aliases": [
+        "deploy pipeline",
+        "ci/cd",
+        "release pipeline"
+      ]
+    },
+    {
+      "id": "mobile-app",
+      "name": "mobile-app",
+      "kind": "client",
+      "aliases": [
+        "mobile app",
+        "ios app",
+        "android app"
+      ]
+    },
+    {
+      "id": "search-api",
+      "name": "search-api",
+      "kind": "service",
+      "aliases": [
+        "search api",
+        "search service"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "atlas",
+      "name": "Project Atlas",
+      "status": "active",
+      "summary": "Recommendations v2 on a graph store.",
+      "systems": [
+        "recs-engine",
+        "data-pipeline"
+      ],
+      "lead": "lena.novak"
+    },
+    {
+      "id": "ledger",
+      "name": "Project Ledger",
+      "status": "active",
+      "summary": "Payments re-platform and PCI scope reduction.",
+      "systems": [
+        "payments-service"
+      ],
+      "lead": "priya.sharma"
+    },
+    {
+      "id": "shield",
+      "name": "Project Shield",
+      "status": "at-risk",
+      "summary": "Auth hardening, SSO and token rotation.",
+      "systems": [
+        "auth-gateway"
+      ],
+      "lead": "sam.okafor"
+    },
+    {
+      "id": "swift",
+      "name": "Project Swift",
+      "status": "active",
+      "summary": "One-tap mobile checkout.",
+      "systems": [
+        "mobile-app",
+        "checkout-web"
+      ],
+      "lead": "diego.alvarez"
+    },
+    {
+      "id": "beacon",
+      "name": "Project Beacon",
+      "status": "active",
+      "summary": "Observability and safer releases.",
+      "systems": [
+        "deploy-pipeline"
+      ],
+      "lead": "olu.adeyemi"
+    }
+  ],
+  "topics": [
+    {
+      "id": "kafka",
+      "name": "Kafka",
+      "keywords": [
+        "kafka",
+        "consumer lag",
+        "topic partition",
+        "event stream"
+      ]
+    },
+    {
+      "id": "graph-database",
+      "name": "Graph databases",
+      "keywords": [
+        "falkordb",
+        "neo4j",
+        "graph store",
+        "graph database",
+        "cypher"
+      ]
+    },
+    {
+      "id": "deploy-policy",
+      "name": "Deploy policy",
+      "keywords": [
+        "deploy freeze",
+        "friday deploy",
+        "friday deploys",
+        "deploys on fridays",
+        "release window",
+        "canary"
+      ]
+    },
+    {
+      "id": "api-protocol",
+      "name": "API protocol (REST/gRPC)",
+      "keywords": [
+        "grpc",
+        "grpc-web",
+        "protobuf",
+        "rest api",
+        "back to rest"
+      ]
+    },
+    {
+      "id": "sso",
+      "name": "SSO and tokens",
+      "keywords": [
+        "sso",
+        "oauth",
+        "token rotation",
+        "jwt",
+        "saml"
+      ]
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "keywords": [
+        "tracing",
+        "dashboards",
+        "alerting",
+        "slo",
+        "opentelemetry"
+      ]
+    },
+    {
+      "id": "pci",
+      "name": "PCI compliance",
+      "keywords": [
+        "pci",
+        "card data",
+        "tokenization",
+        "compliance audit"
+      ]
+    },
+    {
+      "id": "idempotency",
+      "name": "Idempotency",
+      "keywords": [
+        "idempotency",
+        "duplicate charge",
+        "retry storm",
+        "exactly-once"
+      ]
+    }
+  ]
+}
